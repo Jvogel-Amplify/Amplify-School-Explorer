@@ -2,7 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import path from 'path'
 
-import {testController} from './controllers'
+import { schoolsController } from './controllers/schools'
 
 const app = express()
 const port = 9000
@@ -11,15 +11,9 @@ const port = 9000
 app.use(bodyParser.json())
 
 // configure routes
-
-app.get('/test', testController)
-
- /**
- * static assets
- */
-app.use('/static',
+app.use('/data',
     express.static(
-        path.join(__dirname, '../static'),
+        path.join(__dirname, '/data'),
     ),
 )
 
