@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+		<section id="details">
+            <div class='top-nav'>
+                <span id='top-nav-title'>Price Distribution by Neighborhood</span>
+                <button id='clear-focus'>Clear Focus</button>
+            </div>
+            <div id='charts-wrapper'></div>
+        </section>
+
+		<div id="map"></div>
+		<script id="detail-template" type="text/x-handlebars-template">
+            <div class='detail-wrapper'>
+                <div class="row">
+                    <label>Listing ID: </label>
+                    <div class="value">{{id}}</div>
+                </div>
+                <div class="row">
+                    <label>URL:</label>
+                    <div class="value"><a href="{{url}}" target="_blank"> Click Here</a></div>
+                </div>
+                <div class="row">
+                    <label>Rent: </label>
+                    <div class="value">{{rent}}</div>
+                </div>
+                <div class="row">
+                    <label>Deposit: </label>
+                    <div class="value">{{deposit}}</div>
+                </div>
+                <div class="row">
+                    <label>Lease Length: </label>
+                    <div class="value">{{roomLeaseDuration}}</div>
+                </div>
+                <div class="row">
+                    <label>Maximum Lease Length: </label>
+                    <div class="value">{{roomLeaseDurationMax}}</div>
+                </div>
+                <div class="row">
+                    <label>Neighborhood: </label>
+                    <div class="value">{{neighborhood}}</div>
+                </div>
+                <div class="row">
+                    <label>Number of Bedrooms: </label>
+                    <div class="value">{{bedrooms}}</div>
+                </div>
+                <div class="row">
+                    <label>Number of Bathrooms: </label>
+                    <div class="value">{{bathrooms}}</div>
+                </div>
+                <div class="row">
+                    <label>Total Occupants: </label>
+                    <div class="value">{{totalOccupants}}</div>
+                </div>
+            </div>
+          </script>
+	</body>
+</html>
