@@ -37,19 +37,33 @@ export const scrapeAllData = async () => {
     //     console.error(error)
     //     return Promise.reject(error.message)
     // }
-
-    for(let year = startYear; year <= endYear; year++) {
-        try {
-            console.log(`getting data for year: ${year}`)
-            const outputDir = path.join(baseDir, `/${year}`)
-            if (!fs.existsSync(outputDir)){
-                fs.mkdirSync(outputDir);
+    try {
+        const schoolsArray = JSON.parse(fs.readFileSync(`${baseDir}/schools.json`))
+        const numSchools = schoolsArray.length
+    
+        for(let year = startYear; year <= endYear; year++) {
+            try {
+                console.log(`getting data for year: ${year}`)
+                const outputDir = path.join(baseDir, `/${year}`)
+                if (!fs.existsSync(outputDir)){
+                    fs.mkdirSync(outputDir);
+                }
+                for(let schoolIndex = 0; schoolIndex < numSchools; schoolIndex++){
+                    const schoolObj = schoolsArray[schoolIndex]
+                    const schoolId = schoolObj.id
+                    console.log(`getting data for school ID: ${schoolId}`)
+                }
+    
+            } catch (error) {
+                console.error(`Error getting data for year ${year} - ${error}`)
             }
-            
-
-        } catch (error) {
-            console.error(`Error getting data for year ${year}`)
         }
+        Promise.resolve(true)
+    } catch(error) {
+        console.error(error)
+        Promise.reject(error.message)
     }
+
+    
 
 }
