@@ -9,14 +9,19 @@ export const toTimestamp = (strDate) => {
     return datum;
 }
 
-export const percentToRGB = (price) => {
-    const maxPrice = 1525
-    const minPrice = 700
+export const countToRGB = (count) => {
 
-    let percent = ((price - minPrice) / (maxPrice-minPrice)) * 100
+    if (!count) return "rgb(169,169,169)"
+
+    const maxCount = 450
+    const minCount = 1
+
+    let percent = ((count - minCount) / (maxCount - minCount)) * 100
+
     if (percent === 100) {
         percent = 99
     }
+
     var r, g, b;
 
     if (percent < 50) {
@@ -29,6 +34,7 @@ export const percentToRGB = (price) => {
         r = 255;
         g = Math.floor(255 * ((50 - percent % 50) / 50));
     }
+
     b = 0;
 
     return "rgb(" + r + "," + g + "," + b + ")";
@@ -47,9 +53,9 @@ export const toSnakeCase = str => {
     .join('-')
 }
 
-export const toCamelCase = (str) => { 
-    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) 
-    { 
-        return index == 0 ? word.toLowerCase() : word.toUpperCase(); 
-    }).replace(/\s+/g, ''); 
-} 
+export const toCamelCase = (str) => {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index)
+    {
+        return index == 0 ? word.toLowerCase() : word.toUpperCase();
+    }).replace(/\s+/g, '');
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import Modal from 'react-modal'
 import ImpactPerformanceChart from './ImpactPerformanceChart'
+import * as lib from '../../../library/'
 import '../styles/Map.scss'
 
 Modal.setAppElement('#root')
@@ -45,8 +46,16 @@ export default class Map extends React.Component {
     }
 
     render() {
-        const SchoolMarkerComponent = ({ text, key, school }) => {
-            return <div className="school-marker" onClick={this.openModal.bind(null, school.dbn)}></div>
+        const SchoolMarkerComponent = ({ key, school }) => {
+            const markerColor = lib.countToRGB(school.userCount)
+            const markerStyle = { 'borderColor': markerColor }
+            return (
+                <div
+                    className="school-marker"
+                    style={markerStyle}
+                    onClick={this.openModal.bind(null, school.dbn)}
+                ></div>
+            )
         }
 
         const schools = this.props.schools;

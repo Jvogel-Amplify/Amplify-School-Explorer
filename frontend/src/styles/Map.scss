@@ -2,22 +2,18 @@ $transitionSpeed: 200ms ease-in-out;
 
 .school-marker {
     text-align: center;
-    line-height: 18px;
-    width: 18px;
-    height: 18px;
+    line-height: 15px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    border: 3px solid lighten(red, 30%);
+    border: 3px solid gray;
     background-color: white;
     transition: all $transitionSpeed;
-
-    &:hover {
-        border-color: red
-    }
 }
 
 .modal-content {
-    width: 500px;
-    height: 600px;
+    width: 90vw;
+    height: 90vh;
 }
 
 .ReactModal__Overlay {
