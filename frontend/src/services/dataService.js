@@ -71,6 +71,18 @@ export default class DataService {
         }
     }
 
+    getPerformanceImpactData() {
+        if (this.rawData){
+            const filteredData = Object.keys(this.rawData).map( (id) => {
+                const schoolObj = this.rawData[id] 
+                return [schoolObj.dbn, schoolObj.performance, schoolObj.impact]
+            })
+            return filteredData
+        } else {
+            throw new Error('Must fetch data first')
+        }
+    }
+
     // getRawDataWithWhereClause(columnName, columnValue) {
     //     const columnIndex = this.headersMap[toCamelCase(columnName)]
     //     return this.getRawData().filter(

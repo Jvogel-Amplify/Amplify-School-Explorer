@@ -4,8 +4,6 @@ import { toSnakeCase, toCamelCase } from 'lib'
 export default class ChartService {
     constructor(dataService) {
         this.dataService = dataService
-        this.minPrice = 700
-        this.maxPrice = 1700
         this.mapService = null
         this.state = {}
     }
@@ -14,45 +12,45 @@ export default class ChartService {
         this.mapService = mapService
     }
 
-    getChartElement(neighborhood, chartWrapper) {
-        for (let i = 0; i < chartWrapper.children.length; i++) {
-            const element = chartWrapper.children[i].children[1]
-            if (element.className && element.className.includes(toSnakeCase(neighborhood))) {
-                return element
-            }
-        }
-        const column = document.createElement('div')
-        column.className = 'column'
-        column.style.display = 'flex'
-        column.style['flex-direction'] = 'column'
+    // getChartElement(neighborhood, chartWrapper) {
+    //     for (let i = 0; i < chartWrapper.children.length; i++) {
+    //         const element = chartWrapper.children[i].children[1]
+    //         if (element.className && element.className.includes(toSnakeCase(neighborhood))) {
+    //             return element
+    //         }
+    //     }
+    //     const column = document.createElement('div')
+    //     column.className = 'column'
+    //     column.style.display = 'flex'
+    //     column.style['flex-direction'] = 'column'
 
-        const chartElement = document.createElement('div')
-        chartElement.className = `chart ${toSnakeCase(neighborhood)}`
+    //     const chartElement = document.createElement('div')
+    //     chartElement.className = `chart ${toSnakeCase(neighborhood)}`
 
-        const focusButton = document.createElement('button')
-        focusButton.innerHTML = 'Focus'
-        focusButton.onclick = () => {window.dispatchEvent(new CustomEvent('focus-neighborhood', {detail: neighborhood}))}
+    //     const focusButton = document.createElement('button')
+    //     focusButton.innerHTML = 'Focus'
+    //     focusButton.onclick = () => {window.dispatchEvent(new CustomEvent('focus-neighborhood', {detail: neighborhood}))}
 
-        const toggleChartButton = document.createElement('button')
-        toggleChartButton.innerHTML = 'Toggle'
-        toggleChartButton.onclick = () => {window.dispatchEvent(new CustomEvent('toggle', {detail: neighborhood}))}
+    //     const toggleChartButton = document.createElement('button')
+    //     toggleChartButton.innerHTML = 'Toggle'
+    //     toggleChartButton.onclick = () => {window.dispatchEvent(new CustomEvent('toggle', {detail: neighborhood}))}
 
 
-        const chartNav = document.createElement('div')
-        chartNav.className = 'chart-nav'
+    //     const chartNav = document.createElement('div')
+    //     chartNav.className = 'chart-nav'
 
-        const title = document.createElement('span')
-        title.className = 'title'
-        title.innerHTML = neighborhood
+    //     const title = document.createElement('span')
+    //     title.className = 'title'
+    //     title.innerHTML = neighborhood
 
-        chartNav.appendChild(title)
-        chartNav.appendChild(focusButton)
-        chartNav.appendChild(toggleChartButton)
-        column.appendChild(chartNav)
-        column.appendChild(chartElement)
-        chartWrapper.appendChild(column)
-        return chartElement
-    }
+    //     chartNav.appendChild(title)
+    //     chartNav.appendChild(focusButton)
+    //     chartNav.appendChild(toggleChartButton)
+    //     column.appendChild(chartNav)
+    //     column.appendChild(chartElement)
+    //     chartWrapper.appendChild(column)
+    //     return chartElement
+    // }
 
     drawHistogram(neighborhood, chartWrapper) {
         const data = this.dataService.getRawDataWithWhereClause('Neighborhood', neighborhood)
@@ -101,74 +99,59 @@ export default class ChartService {
 
     }
 
-    drawScatterPlot(neighborhood, chartWrapper) {
+    drawScatterPlot(element) {
 
-        const data = this.dataService.getRawDataWithWhereClause('Neighborhood', neighborhood)
-        const filteredData = data.map((filteredDataPoint) => {
-                const isActive = filteredDataPoint[3] === 'true' ? 'point { opacity: 1; }' : 'point { opacity: 0.3; }'
-                return [parseFloat(filteredDataPoint[1]), parseFloat(filteredDataPoint[10]), isActive]
-            })
-
-        const chartElement = this.getChartElement(neighborhood, chartWrapper)
-
+        const data = this.dataService.getPerformanceImpactData()
+        
         const gData = new google.visualization.DataTable();
-        gData.addColumn('number', 'rent');
-        gData.addColumn('number', 'distToTrain');
-        gData.addColumn({ 'type': 'string', 'role': 'style' });
+        gData.addColumn('number', 'School ID');
+        gData.addColumn('number', 'Performance');
+        gData.addColumn( 'number', 'Impact');
 
-        filteredData.forEach((row) => {
-            gData.addRow([
-                row[0],
-                row[1],
-                row[2]
-            ]);
+        data.forEach((row) => {
+            gData.addRow(row);
         });
 
         const options = {
             lineWidth: 0,
             pointSize: 5,
-            title: `Price vs Distance to Closest Train for ${neighborhood}`,
-            hAxis: { title: 'Rent', minValue: this.minPrice, maxValue: this.maxPrice },
-            vAxis: { title: 'Distance to Closest Train (mi)', minValue: 0, maxValue: .5 },
+            title: ``,
+            hAxis: { title: 'Performance', minValue: 0, maxValue: 1 },
+            hAxis: { title: 'Impact', minValue: 0, maxValue: 1 },
             legend: { position: 'none' },
         };
 
-        const chart = new google.visualization.LineChart(chartElement);
+        const chart = new google.visualization.LineChart(element);
 
-        const selectHandler = () => {
-            const selectedItem = chart.getSelection()[0];
-            if (selectedItem) {
-                // const value = gData.getValue(selectedItem.row, 0);
-                // const dataPoint = this.dataService.getRow(value)
-                //this.drawHistogram(neighborhood, chartWrapper)
-            }
-        }
+        // const selectHandler = () => {
+        //     const selectedItem = chart.getSelection()[0];
+        //     if (selectedItem) {
+        //         // const value = gData.getValue(selectedItem.row, 0);
+        //         // const dataPoint = this.dataService.getRow(value)
+        //         //this.drawHistogram(neighborhood, chartWrapper)
+        //     }
+        // }
 
-        google.visualization.events.addListener(chart, 'select', selectHandler);
+        // google.visualization.events.addListener(chart, 'select', selectHandler);
         chart.draw(gData, options)
     }
 
-    toggleChart(neighborhood, chartWrapper) {
-        const currentChart = this.state[toCamelCase(neighborhood)].chart
-        if (currentChart === 'priceDistribution') {
-            this.drawScatterPlot(neighborhood, chartWrapper)
-            this.state[toCamelCase(neighborhood)].chart = 'scatterPlot'
-        } else if (currentChart === 'scatterPlot') {
-            this.drawHistogram(neighborhood, chartWrapper)
-            this.state[toCamelCase(neighborhood)].chart = 'priceDistribution'
-        }
-    }
+    // toggleChart(neighborhood, chartWrapper) {
+    //     const currentChart = this.state[toCamelCase(neighborhood)].chart
+    //     if (currentChart === 'priceDistribution') {
+    //         this.drawScatterPlot(neighborhood, chartWrapper)
+    //         this.state[toCamelCase(neighborhood)].chart = 'scatterPlot'
+    //     } else if (currentChart === 'scatterPlot') {
+    //         this.drawHistogram(neighborhood, chartWrapper)
+    //         this.state[toCamelCase(neighborhood)].chart = 'priceDistribution'
+    //     }
+    // }
 
-    displayCharts(chartWrapper) {
+    init(callback) {
         GoogleCharts.load(
             () => {
-                const neighborhoods = this.dataService.getCategoriesForColumn('Neighborhood')
-                neighborhoods.forEach((neighborhood) => {
-                    this.drawHistogram(neighborhood, chartWrapper)
-                    this.state[toCamelCase(neighborhood)] = {
-                        chart: 'priceDistribution'
-                    }
-                })
+                this.init = true
+                callback()
             }
         )
 

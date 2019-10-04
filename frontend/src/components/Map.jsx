@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import Modal from 'react-modal'
+import ImpactPerformanceChart from './ImpactPerformanceChart'
 import '../styles/Map.scss'
 
 Modal.setAppElement('#root')
@@ -21,7 +22,8 @@ export default class Map extends React.Component {
         super()
 
         this.state = {
-            modalIsOpen: false
+            modalIsOpen: false,
+            selectedSchool: null
         }
 
         this.openModal = this.openModal.bind(this)
@@ -29,8 +31,8 @@ export default class Map extends React.Component {
         this.closeModal = this.closeModal.bind(this)
     }
 
-    openModal() {
-        this.setState({ modalIsOpen: true })
+    openModal(id) {
+        this.setState({ modalIsOpen: true, selectedSchool: id })
     }
 
     afterOpenModal() {
@@ -43,7 +45,9 @@ export default class Map extends React.Component {
     }
 
     render() {
-        const SchoolMarkerComponent = ({ text }) => <div className="school-marker" onClick={this.openModal}>{text}</div>
+        const SchoolMarkerComponent = ({ text, key, school }) => {
+            return <div className="school-marker" onClick={this.openModal.bind(null, school.id)}>{text}</div>
+        }
 
         const schools = this.props.schools;
 
@@ -58,7 +62,9 @@ export default class Map extends React.Component {
                     }}
                     defaultZoom={10}
                 >
-                    {schools.map(school => <SchoolMarkerComponent key={school.id} lat={school.lat} lng={school.lng} text={school.name}/>)}
+                    {schools.map(school => {
+                        return <SchoolMarkerComponent key={school.id} lat={school.lat} lng={school.lng} text={school.name} school={school}/>
+                    })}
 
                 </GoogleMapReact>
 
@@ -70,7 +76,7 @@ export default class Map extends React.Component {
                     contentLabel="Example Modal"
                 >
 
-                <div className="modal-content">I am a modal</div>
+                <div className="modal-content"><ImpactPerformanceChart selectedSchool={this.state.selectedSchool}></ImpactPerformanceChart></div>
         </Modal>
             </div>
         )
