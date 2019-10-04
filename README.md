@@ -55,6 +55,17 @@ Project Team Members:
         - report_year: string (ex: 2018)
 - Student Achievement
     - TBD
+
+## Other Data Sources
+- https://looker-data.prod.learning.amplify.com/dashboards/354
+- https://apps-studios.demo.learning.amplify.com/reports/#_data_science_
+- https://data.cityofnewyork.us/Education/School-Point-Locations/jfju-ynrr
+- https://data.cityofnewyork.us/Education/School-District-Breakdowns/g3vh-kbnw
+- https://data.cityofnewyork.us/browse?category=Education&page=2
+- https://looker-data.prod.learning.amplify.com/explore/new_curriculum/fact_curriculum_event?qid=l75iiZmcDfJRDjs7NMONGu&toggle=fil
+
+## TODOs
+- https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj
     
     
      
