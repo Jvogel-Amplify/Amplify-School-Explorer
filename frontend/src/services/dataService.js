@@ -35,6 +35,19 @@ export default class DataService {
                 const studentPop = await axios.get(`http://localhost:9000/data/2018/${schoolId}/student_pop.json`)
                 this.rawData[schoolId].studentPop = studentPop.data.data
             })
+
+            const locationData = await axios.get(`http://localhost:9000/data/school-locations-17-18.json`)
+            locationData.data.forEach(locationObj => {
+                const schoolId = locationObj["ATS SYSTEM CODE"]
+                if(this.rawData[schoolId]) {
+                    const coordinates = locationObj["Location 1"].split('\n').pop().replace(/[{()}]/g, '').split(',')
+                    this.rawData[schoolId].lat = coordinates[0]
+                    this.rawData[schoolId].lng = coordinates[1]
+                }
+            })
+
+            console.log(this.rawData)
+
             Promise.resolve(true)
         } catch (error) {
             console.error(error)
