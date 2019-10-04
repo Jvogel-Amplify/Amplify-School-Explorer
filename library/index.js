@@ -13,8 +13,8 @@ export const countToRGB = (count) => {
 
     if (!count) return "rgb(169,169,169)"
 
-    const maxCount = 450
-    const minCount = 1
+    const maxCount = 1
+    const minCount = 450
 
     let percent = ((count - minCount) / (maxCount - minCount)) * 100
 

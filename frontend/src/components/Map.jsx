@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import Modal from 'react-modal'
 import ImpactPerformanceChart from './ImpactPerformanceChart'
+import School from './School'
 import * as lib from '../../../library/'
 import '../styles/Map.scss'
 
@@ -33,7 +34,10 @@ export default class Map extends React.Component {
     }
 
     openModal(id) {
-        this.setState({ modalIsOpen: true, selectedSchool: id })
+        this.setState({
+            modalIsOpen: true,
+            selectedSchool: id
+        })
     }
 
     afterOpenModal() {
@@ -58,7 +62,10 @@ export default class Map extends React.Component {
             )
         }
 
-        const schools = this.props.schools;
+        const schoolsObj = this.props.schools
+        const schoolsArr = Object.keys(schoolsObj)
+            .map(key => schoolsObj[key])
+            .filter(item => item.lat && item.lng)
 
         return (
             // Important! Always set the container height explicitly
@@ -71,7 +78,7 @@ export default class Map extends React.Component {
                     }}
                     defaultZoom={10}
                 >
-                    {schools.map(school => {
+                    {schoolsArr.map(school => {
                         return <SchoolMarkerComponent key={school.dbn} lat={school.lat} lng={school.lng} school={school}/>
                     })}
 
@@ -82,12 +89,20 @@ export default class Map extends React.Component {
                     onAfterOpen={this.afterOpenModal}
                     onRequestClose={this.closeModal}
                     style={customStyles}
-                    contentLabel="Example Modal"
                 >
 
                 <div className="modal-content">
-                    <ImpactPerformanceChart 
-                        selectedSchool={this.state.selectedSchool} 
+                    <div className="modal-header">
+                        <span className="modal-close" onClick={this.closeModal}>X</span>
+                    </div>
+
+                    <School
+                        selectedSchool={this.state.selectedSchool}
+                        schools={schoolsObj}
+                    ></School>
+
+                    <ImpactPerformanceChart
+                        selectedSchool={this.state.selectedSchool}
                         chartService={this.props.chartService}
                     ></ImpactPerformanceChart>
                 </div>
