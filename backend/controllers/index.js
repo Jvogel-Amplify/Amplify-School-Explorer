@@ -6,8 +6,8 @@ export const testController = (req, res) => {
 
 export const scrapeDataController = async (req, res) => {
     try {
-        await DataService.scrapeAllData()
-        res.sendStatus(200)
+        DataService.scrapeAllData()
+        res.json({message: 'Scraping in progress. Check server logs for details.'})
     } catch (error) {
         res.json({error})
     }
