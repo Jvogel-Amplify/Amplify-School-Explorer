@@ -8,49 +8,19 @@ export default class ChartService {
         this.state = {}
     }
 
+    init(callback) {
+        GoogleCharts.load(
+            () => {
+                this.init = true
+                callback()
+            }
+        )
+
+    }
+
     setMapService(mapService){
         this.mapService = mapService
     }
-
-    // getChartElement(neighborhood, chartWrapper) {
-    //     for (let i = 0; i < chartWrapper.children.length; i++) {
-    //         const element = chartWrapper.children[i].children[1]
-    //         if (element.className && element.className.includes(toSnakeCase(neighborhood))) {
-    //             return element
-    //         }
-    //     }
-    //     const column = document.createElement('div')
-    //     column.className = 'column'
-    //     column.style.display = 'flex'
-    //     column.style['flex-direction'] = 'column'
-
-    //     const chartElement = document.createElement('div')
-    //     chartElement.className = `chart ${toSnakeCase(neighborhood)}`
-
-    //     const focusButton = document.createElement('button')
-    //     focusButton.innerHTML = 'Focus'
-    //     focusButton.onclick = () => {window.dispatchEvent(new CustomEvent('focus-neighborhood', {detail: neighborhood}))}
-
-    //     const toggleChartButton = document.createElement('button')
-    //     toggleChartButton.innerHTML = 'Toggle'
-    //     toggleChartButton.onclick = () => {window.dispatchEvent(new CustomEvent('toggle', {detail: neighborhood}))}
-
-
-    //     const chartNav = document.createElement('div')
-    //     chartNav.className = 'chart-nav'
-
-    //     const title = document.createElement('span')
-    //     title.className = 'title'
-    //     title.innerHTML = neighborhood
-
-    //     chartNav.appendChild(title)
-    //     chartNav.appendChild(focusButton)
-    //     chartNav.appendChild(toggleChartButton)
-    //     column.appendChild(chartNav)
-    //     column.appendChild(chartElement)
-    //     chartWrapper.appendChild(column)
-    //     return chartElement
-    // }
 
     drawHistogram(neighborhood, chartWrapper) {
         const data = this.dataService.getRawDataWithWhereClause('Neighborhood', neighborhood)
@@ -99,7 +69,40 @@ export default class ChartService {
 
     }
 
-    drawScatterPlot(elementId, selectedSchoolId) {
+    drawFrameworkScores(elementId, selectedSchoolId) {
+        const element = document.getElementById(elementId)
+        const data = this.dataService.getFrameworkScoresData()
+        const gData = new google.visualization.DataTable()
+        gData.addColumn('string', 'Higher Need Student Category')
+        gData.addColumn('number', 'Impact')
+        gData.addColumn({'type': 'string', 'role': 'style'})
+
+        // let lastRow
+        // data.forEach((row) => {
+        //     if(row[0] === selectedSchoolId) {
+        //         lastRow = [row[1], row[2], 'point { size: 6; shape-type: circle; fill-color: #FF8C00; }']
+        //     } else {
+        //         gData.addRow([row[1], row[2], 'point { size: 2; shape-type: circle; fill-color: #0000ff; }'])
+        //     }
+        // });
+        // gData.addRow(lastRow)
+
+        // const options = {
+        //     lineWidth: 0,
+        //     pointSize: 5,
+        //     title: ``,
+        //     hAxis: { title: 'Performance', minValue: 0, maxValue: 1 },
+        //     vAxis: { title: 'Impact', minValue: 0, maxValue: 1 },
+        //     legend: { position: 'none' },
+        // };
+
+        // const chart = new google.visualization.LineChart(element);
+
+      
+        // chart.draw(gData, options)
+    }
+
+    drawPerformanceImpact(elementId, selectedSchoolId) {
         const element = document.getElementById(elementId)
         const data = this.dataService.getPerformanceImpactData()
         const gData = new google.visualization.DataTable()
@@ -112,8 +115,7 @@ export default class ChartService {
             if(row[0] === selectedSchoolId) {
                 lastRow = [row[1], row[2], 'point { size: 6; shape-type: circle; fill-color: #FF8C00; }']
             } else {
-                gData.addRow([row[1], row[2], 'point { size: 2; shape-type: circle; fill-color: #0000ff; }'])
-
+                gData.addRow([row[1], row[2], 'point { size: 2; shape-type: circle; fill-color: #BFBFBF; opacity: 0.5; }'])
             }
         });
         gData.addRow(lastRow)
@@ -140,26 +142,5 @@ export default class ChartService {
 
         // google.visualization.events.addListener(chart, 'select', selectHandler);
         chart.draw(gData, options)
-    }
-
-    // toggleChart(neighborhood, chartWrapper) {
-    //     const currentChart = this.state[toCamelCase(neighborhood)].chart
-    //     if (currentChart === 'priceDistribution') {
-    //         this.drawScatterPlot(neighborhood, chartWrapper)
-    //         this.state[toCamelCase(neighborhood)].chart = 'scatterPlot'
-    //     } else if (currentChart === 'scatterPlot') {
-    //         this.drawHistogram(neighborhood, chartWrapper)
-    //         this.state[toCamelCase(neighborhood)].chart = 'priceDistribution'
-    //     }
-    // }
-
-    init(callback) {
-        GoogleCharts.load(
-            () => {
-                this.init = true
-                callback()
-            }
-        )
-
     }
 }

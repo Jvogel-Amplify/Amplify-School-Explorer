@@ -22,19 +22,19 @@ export default class DataService {
                 this.rawData[id].performance = impactPerformanceObj.performance
             })
 
-            // await Object.keys(this.rawData).forEach(async schoolId => {
-            //     const frameworkScores = await axios.get(`http://localhost:9000/data/2018/${schoolId}/framework_scores.json`)
-            //     this.rawData[schoolId].frameworkScores = frameworkScores.data.data[0]
+            await Object.keys(this.rawData).forEach(async schoolId => {
+                const frameworkScores = await axios.get(`http://localhost:9000/data/2018/${schoolId}/framework_scores.json`)
+                this.rawData[schoolId].frameworkScores = frameworkScores.data.data[0]
 
-            //     const enrollment = await axios.get(`http://localhost:9000/data/2018/${schoolId}/enrollment.json`)
-            //     this.rawData[schoolId].enrollment = enrollment.data.data
+                // const enrollment = await axios.get(`http://localhost:9000/data/2018/${schoolId}/enrollment.json`)
+                // this.rawData[schoolId].enrollment = enrollment.data.data
 
-            //     const percentileRank = await axios.get(`http://localhost:9000/data/2018/${schoolId}/percentile_rank.json`)
-            //     this.rawData[schoolId].percentileRank = percentileRank.data.data
+                // const percentileRank = await axios.get(`http://localhost:9000/data/2018/${schoolId}/percentile_rank.json`)
+                // this.rawData[schoolId].percentileRank = percentileRank.data.data
 
-            //     const studentPop = await axios.get(`http://localhost:9000/data/2018/${schoolId}/student_pop.json`)
-            //     this.rawData[schoolId].studentPop = studentPop.data.data
-            // })
+                // const studentPop = await axios.get(`http://localhost:9000/data/2018/${schoolId}/student_pop.json`)
+                // this.rawData[schoolId].studentPop = studentPop.data.data
+            })
 
             const locationData = await axios.get(`http://localhost:9000/data/school-locations-17-18.json`)
             locationData.data.forEach(locationObj => {
@@ -74,6 +74,19 @@ export default class DataService {
             const filteredData = Object.keys(this.rawData).map( (id) => {
                 const schoolObj = this.rawData[id] 
                 return [schoolObj.dbn, schoolObj.performance, schoolObj.impact]
+            })
+            return filteredData
+        } else {
+            throw new Error('Must fetch data first')
+        }
+    }
+
+    getFrameworkScoresData() {
+        if (this.rawData){
+            const filteredData = Object.keys(this.rawData).map( (id) => {
+                const schoolObj = this.rawData[id] 
+                const {year, report_type, CT, ES, RI, SE, SF, TR, SA} = schoolObj.frameworkScores
+                return [schoolObj.dbn, year, report_type, CT, ES, RI, SE, SF, TR, SA]
             })
             return filteredData
         } else {

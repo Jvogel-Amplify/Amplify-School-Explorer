@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import Modal from 'react-modal'
 import ImpactPerformanceChart from './ImpactPerformanceChart'
+import FrameworkScoresChart from './FrameworkScoresChart'
 import School from './School'
 import * as lib from '../../../library/'
 import '../styles/Map.scss'
@@ -92,6 +93,7 @@ export default class Map extends React.Component {
                 >
 
                 <div className="modal-content">
+<<<<<<< Updated upstream
                     <div className="modal-header">
                         <span className="modal-close" onClick={this.closeModal}>X</span>
                     </div>
@@ -103,8 +105,16 @@ export default class Map extends React.Component {
 
                     <ImpactPerformanceChart
                         selectedSchool={this.state.selectedSchool}
+=======
+                    <PerformanceImpactChart 
+                        selectedSchool={this.state.selectedSchool} 
+>>>>>>> Stashed changes
                         chartService={this.props.chartService}
-                    ></ImpactPerformanceChart>
+                    ></PerformanceImpactChart>
+                    <FrameworkScoresChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></FrameworkScoresChart>
                 </div>
         </Modal>
             </div>
