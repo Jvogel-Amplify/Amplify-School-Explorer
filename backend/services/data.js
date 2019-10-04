@@ -9,7 +9,7 @@ const createPath = (path) => {
     }
 }
 
-const scrapeEndpointData = async (schoolId, year, endpoint, formData, outputFile) => {
+const pullEndpointData = async (schoolId, year, endpoint, formData, outputFile) => {
     const response = await axios(
         {
             method: 'post',
@@ -21,7 +21,7 @@ const scrapeEndpointData = async (schoolId, year, endpoint, formData, outputFile
     return Promise.resolve(response.data)
 }
 
-const scrapeDataForYear = async (schoolsArray, year, outputDir) => {
+const pullDataForYear = async (schoolsArray, year, outputDir) => {
     const numSchools = schoolsArray.length
     for(let schoolIndex = 0; schoolIndex < numSchools; schoolIndex++){
         const schoolObj = schoolsArray[schoolIndex]
@@ -51,7 +51,7 @@ const scrapeDataForYear = async (schoolsArray, year, outputDir) => {
                     console.log(`Data for ${schoolId} in ${year} already exists : ${endpoint}`)
                     stats.newData = false
                 } else {
-                    data = await scrapeEndpointData(schoolId, year, `${config.data.baseUrl}${endpoint}.php`, formData, outputFile)
+                    data = await pullEndpointData(schoolId, year, `${config.data.baseUrl}${endpoint}.php`, formData, outputFile)
                     if(data.length === 0){
                         console.log(`No data for: ${schoolId} in ${year} from ${endpoint}`)
                         stats.containsData = false
@@ -69,7 +69,7 @@ const scrapeDataForYear = async (schoolsArray, year, outputDir) => {
     Promise.resolve(true)
 }
 
-export const scrapeAllData = async () => {
+export const pullAllData = async () => {
     const dataDir = path.join(__dirname, '../data')
     // Impact performance
     try {
@@ -93,7 +93,7 @@ export const scrapeAllData = async () => {
             try {
                 const outputDir = path.join(dataDir, `/${year}`)
                 createPath(outputDir)
-                await scrapeDataForYear(schoolsArray, year, outputDir)
+                await pullDataForYear(schoolsArray, year, outputDir)
     
             } catch (error) {
                 console.error(`Error getting data for year ${year} - ${error}`)
