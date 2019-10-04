@@ -6,10 +6,10 @@ import DataService from './services/dataService'
 
 const init = async () => {
     const dataService = new DataService()
-    await dataService.fetchData()
+    const data = await dataService.fetchData()
 
     ReactDOM.render(
-        <App />,
+        <App dataService={dataService} />,
         document.getElementById('root')
     )
 }

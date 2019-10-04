@@ -54,15 +54,13 @@ export default class DataService {
                 }
             })
 
-            console.log(this.rawData)
-
             Promise.resolve(true)
         } catch (error) {
             console.error(error)
             Promise.reject(error)
         }
     }
-    
+
     getRawData() {
         if (this.rawData){
             return this.rawData
@@ -120,8 +118,8 @@ export default class DataService {
     //         return result
     //     })
     //     return formattedData
-    // }   
-    
+    // }
+
     // getData() {
     //     const rawData = this.getRawData()
     //     const headers = rawData[0]
@@ -133,7 +131,7 @@ export default class DataService {
     //         })
     //         return result
     //     })
-    //     return formattedData 
+    //     return formattedData
     // }
 
     // getRow(id) {

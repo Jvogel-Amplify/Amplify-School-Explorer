@@ -58,7 +58,7 @@ export default class Map extends React.Component {
                     }}
                     defaultZoom={10}
                 >
-                    {schools.map(school => <SchoolMarkerComponent key={school.id} lat={school.lat} lng={school.lng} text={school.name}/>)}
+                    {schools.map(school => <SchoolMarkerComponent key={school.dbn} lat={school.lat} lng={school.lng} text={''}/>)}
 
                 </GoogleMapReact>
 
