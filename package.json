@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "nodemon --exec babel-node backend/index.js",
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "pull": "curl http://localhost:9000/pull-data"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +16,9 @@
     "express": "^4.17.1",
     "google-charts": "^2.0.0",
     "handlebars": "^4.2.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
@@ -23,15 +26,14 @@
     "@babel/node": "^7.6.1",
     "@babel/plugin-transform-runtime": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.6.0",
     "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
-    "csv-string": "^3.1.6",
     "html-webpack-plugin": "^3.2.0",
-    "jquery-csv": "^1.0.5",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.2",
