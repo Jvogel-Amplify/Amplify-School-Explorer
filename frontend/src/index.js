@@ -13,7 +13,7 @@ const init = async () => {
 
     chartService.init(() => {
         ReactDOM.render(
-            <App dataService={dataService} />,
+            <App dataService={dataService} chartService={chartService} />,
             document.getElementById('root')
         )
     })

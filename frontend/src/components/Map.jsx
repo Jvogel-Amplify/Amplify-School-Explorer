@@ -85,7 +85,12 @@ export default class Map extends React.Component {
                     contentLabel="Example Modal"
                 >
 
-                <div className="modal-content"><ImpactPerformanceChart selectedSchool={this.state.selectedSchool}></ImpactPerformanceChart></div>
+                <div className="modal-content">
+                    <ImpactPerformanceChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></ImpactPerformanceChart>
+                </div>
         </Modal>
             </div>
         )

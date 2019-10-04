@@ -11,7 +11,7 @@ export default class App extends React.Component {
 
         return (
             <div id="app">
-                <Map schools={schools} />
+                <Map schools={schools} chartService={this.props.chartService}/>
             </div>
         )
     }
