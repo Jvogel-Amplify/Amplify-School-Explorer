@@ -46,6 +46,14 @@ export default class DataService {
                 }
             })
 
+            const amplifyUserCount = await axios.get(`http://localhost:9000/data/amplify-school-user-count.json`)
+            amplifyUserCount.data.forEach(schoolObj => {
+                const schoolId = schoolObj.id
+                if(this.rawData[schoolId]) {
+                    this.rawData[schoolId].userCount = schoolObj.count_user
+                }
+            })
+
             console.log(this.rawData)
 
             Promise.resolve(true)
