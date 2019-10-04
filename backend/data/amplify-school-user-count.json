@@ -1,0 +1,2502 @@
+[
+    {
+        "id": "01M015",
+        "display_name": "P.S. 015 Roberto Clemente",
+        "count_user": "2"
+    },
+    {
+        "id": "01M034",
+        "display_name": "P.S. 034 Franklin D. Roosevelt",
+        "count_user": "10"
+    },
+    {
+        "id": "01M134",
+        "display_name": "P.S. 134 Henrietta Szold",
+        "count_user": "1"
+    },
+    {
+        "id": "01M140",
+        "display_name": "P.S. 140 Nathan Straus",
+        "count_user": "1"
+    },
+    {
+        "id": "01M184",
+        "display_name": "P.S. 184m Shuang Wen",
+        "count_user": "8"
+    },
+    {
+        "id": "01M315",
+        "display_name": "The East Village Community School",
+        "count_user": "5"
+    },
+    {
+        "id": "01M378",
+        "display_name": "School for Global Leaders",
+        "count_user": "196"
+    },
+    {
+        "id": "02M003",
+        "display_name": "P.S. 003 Charrette School",
+        "count_user": "7"
+    },
+    {
+        "id": "02M006",
+        "display_name": "P.S. 006 Lillie D. Blake",
+        "count_user": "1"
+    },
+    {
+        "id": "02M040",
+        "display_name": "P.S. 040 Augustus Saint-Gaudens",
+        "count_user": "2"
+    },
+    {
+        "id": "02M077",
+        "display_name": "P.S. 77 Lower Lab School",
+        "count_user": "2"
+    },
+    {
+        "id": "02M089",
+        "display_name": "P.S. 89",
+        "count_user": "1"
+    },
+    {
+        "id": "02M104",
+        "display_name": "J.H.S. 104 Simon Baruch",
+        "count_user": "5"
+    },
+    {
+        "id": "02M116",
+        "display_name": "P.S. 116 Mary Lindley Murray",
+        "count_user": "1"
+    },
+    {
+        "id": "02M131",
+        "display_name": "M.S. 131",
+        "count_user": "70"
+    },
+    {
+        "id": "02M151",
+        "display_name": "Yorkville Community School",
+        "count_user": "1"
+    },
+    {
+        "id": "02M158",
+        "display_name": "P.S. 158 Bayard Taylor",
+        "count_user": "1"
+    },
+    {
+        "id": "02M167",
+        "display_name": "J.H.S. 167 Robert F. Wagner",
+        "count_user": "8"
+    },
+    {
+        "id": "02M177",
+        "display_name": "Yorkville East Middle School",
+        "count_user": "2"
+    },
+    {
+        "id": "02M183",
+        "display_name": "P.S. 183 Robert L. Stevenson",
+        "count_user": "1"
+    },
+    {
+        "id": "02M198",
+        "display_name": "P.S. 198 Isador E. Ida Straus",
+        "count_user": "2"
+    },
+    {
+        "id": "02M217",
+        "display_name": "P.S./I.S. 217 Roosevelt Island",
+        "count_user": "2"
+    },
+    {
+        "id": "02M255",
+        "display_name": "M.S. 255 Salk School of Science",
+        "count_user": "110"
+    },
+    {
+        "id": "02M267",
+        "display_name": "East Side Elementary School, PS 267",
+        "count_user": "2"
+    },
+    {
+        "id": "02M276",
+        "display_name": "Battery Park City School",
+        "count_user": "7"
+    },
+    {
+        "id": "02M281",
+        "display_name": "The River School",
+        "count_user": "1"
+    },
+    {
+        "id": "02M290",
+        "display_name": "P.S. 290 Manhattan New School",
+        "count_user": "1"
+    },
+    {
+        "id": "02M347",
+        "display_name": "The 47 American Sign Language \u0026 English Lower Scho",
+        "count_user": "1"
+    },
+    {
+        "id": "02M442",
+        "display_name": "Ballet Tech, NYC Public School for Dance",
+        "count_user": "68"
+    },
+    {
+        "id": "02M527",
+        "display_name": "P.S. 527 - East Side School for Social Action",
+        "count_user": "1"
+    },
+    {
+        "id": "02M933",
+        "display_name": "City Knoll Middle School",
+        "count_user": "3"
+    },
+    {
+        "id": "03M075",
+        "display_name": "P.S. 075 Emily Dickinson",
+        "count_user": "1"
+    },
+    {
+        "id": "03M084",
+        "display_name": "P.S. 084 Lillian Weber",
+        "count_user": "10"
+    },
+    {
+        "id": "03M149",
+        "display_name": "P.S. 149 Sojourner Truth",
+        "count_user": "4"
+    },
+    {
+        "id": "03M166",
+        "display_name": "P.S. 166 The Richard Rodgers School of The Arts an",
+        "count_user": "4"
+    },
+    {
+        "id": "03M180",
+        "display_name": "P.S. 180 Hugo Newman",
+        "count_user": "1"
+    },
+    {
+        "id": "03M199",
+        "display_name": "P.S. 199 Jessie Isador Straus",
+        "count_user": "2"
+    },
+    {
+        "id": "03M241",
+        "display_name": "STEM Institute of Manhattan",
+        "count_user": "3"
+    },
+    {
+        "id": "03M247",
+        "display_name": "M.S. M247 Dual Language Middle School",
+        "count_user": "1"
+    },
+    {
+        "id": "03M250",
+        "display_name": "M.S. 250 West Side Collaborative Middle School",
+        "count_user": "1"
+    },
+    {
+        "id": "03M859",
+        "display_name": "Special Music School",
+        "count_user": "28"
+    },
+    {
+        "id": "03M860",
+        "display_name": "Frederick Douglass Academy II Secondary School",
+        "count_user": "3"
+    },
+    {
+        "id": "04M007",
+        "display_name": "P.S. 007 Samuel Stern",
+        "count_user": "4"
+    },
+    {
+        "id": "04M037",
+        "display_name": "River East Elementary",
+        "count_user": "3"
+    },
+    {
+        "id": "04M038",
+        "display_name": "P.S. 38 Roberto Clemente",
+        "count_user": "3"
+    },
+    {
+        "id": "04M057",
+        "display_name": "James Weldon Johnson",
+        "count_user": "6"
+    },
+    {
+        "id": "04M083",
+        "display_name": "P.S. 083 Luis Munoz Rivera",
+        "count_user": "1"
+    },
+    {
+        "id": "04M096",
+        "display_name": "P.S. 096 Joseph Lanzetta",
+        "count_user": "2"
+    },
+    {
+        "id": "04M102",
+        "display_name": "P.S. 102 Jacques Cartier",
+        "count_user": "6"
+    },
+    {
+        "id": "04M108",
+        "display_name": "P.S. 108 Assemblyman Angelo Del Toro Educational C",
+        "count_user": "120"
+    },
+    {
+        "id": "04M155",
+        "display_name": "P.S. 155 William Paca",
+        "count_user": "3"
+    },
+    {
+        "id": "04M206",
+        "display_name": "P.S. 206 Jose Celso Barbosa",
+        "count_user": "9"
+    },
+    {
+        "id": "04M375",
+        "display_name": "Mosaic Preparatory Academy",
+        "count_user": "1"
+    },
+    {
+        "id": "04M825",
+        "display_name": "Isaac Newton Middle School for Math \u0026 Science",
+        "count_user": "2"
+    },
+    {
+        "id": "05M030",
+        "display_name": "P.S. 030 Hernandez/Hughes",
+        "count_user": "3"
+    },
+    {
+        "id": "05M036",
+        "display_name": "P.S. 036 Margaret Douglas",
+        "count_user": "6"
+    },
+    {
+        "id": "05M092",
+        "display_name": "P.S. 092 Mary McLeod Bethune",
+        "count_user": "2"
+    },
+    {
+        "id": "05M123",
+        "display_name": "P.S. 123 Mahalia Jackson",
+        "count_user": "4"
+    },
+    {
+        "id": "05M125",
+        "display_name": "P.S. 125 Ralph Bunche",
+        "count_user": "6"
+    },
+    {
+        "id": "05M129",
+        "display_name": "P.S. 129 John H. Finley",
+        "count_user": "3"
+    },
+    {
+        "id": "05M133",
+        "display_name": "P.S. 133 Fred R Moore",
+        "count_user": "6"
+    },
+    {
+        "id": "05M161",
+        "display_name": "P.S. 161 Pedro Albizu Campos",
+        "count_user": "113"
+    },
+    {
+        "id": "05M175",
+        "display_name": "P.S. 175 Henry H Garnet",
+        "count_user": "4"
+    },
+    {
+        "id": "05M197",
+        "display_name": "P.S. 197 John B. Russwurm",
+        "count_user": "2"
+    },
+    {
+        "id": "05M318",
+        "display_name": "Thurgood Marshall Academy Lower School",
+        "count_user": "1"
+    },
+    {
+        "id": "05M499",
+        "display_name": "Frederick Douglass Academy",
+        "count_user": "2"
+    },
+    {
+        "id": "05M517",
+        "display_name": "Teachers College Community School",
+        "count_user": "2"
+    },
+    {
+        "id": "06M004",
+        "display_name": "P.S. 004 Duke Ellington",
+        "count_user": "13"
+    },
+    {
+        "id": "06M008",
+        "display_name": "P.S. 008 Luis Belliard",
+        "count_user": "2"
+    },
+    {
+        "id": "06M028",
+        "display_name": "P.S. 028 Wright Brothers",
+        "count_user": "1"
+    },
+    {
+        "id": "06M098",
+        "display_name": "P.S. 098 Shorac Kappock",
+        "count_user": "1"
+    },
+    {
+        "id": "06M103",
+        "display_name": "Dos Puentes Elementary School",
+        "count_user": "2"
+    },
+    {
+        "id": "06M115",
+        "display_name": "P.S. 115 Alexander Humboldt",
+        "count_user": "10"
+    },
+    {
+        "id": "06M143",
+        "display_name": "J.H.S. 143 Eleanor Roosevelt",
+        "count_user": "79"
+    },
+    {
+        "id": "06M178",
+        "display_name": "Professor Juan Bosch Public School",
+        "count_user": "2"
+    },
+    {
+        "id": "06M187",
+        "display_name": "P.S./I.S. 187 Hudson Cliffs",
+        "count_user": "3"
+    },
+    {
+        "id": "06M189",
+        "display_name": "P.S. 189",
+        "count_user": "8"
+    },
+    {
+        "id": "06M192",
+        "display_name": "P.S. 192 Jacob H. Schiff",
+        "count_user": "2"
+    },
+    {
+        "id": "06M278",
+        "display_name": "Paula Hedbavny School",
+        "count_user": "2"
+    },
+    {
+        "id": "06M311",
+        "display_name": "Amistad Dual Language School",
+        "count_user": "6"
+    },
+    {
+        "id": "06M349",
+        "display_name": "Harbor Heights",
+        "count_user": "2"
+    },
+    {
+        "id": "07X001",
+        "display_name": "P.S. 001 Courtlandt School",
+        "count_user": "2"
+    },
+    {
+        "id": "07X005",
+        "display_name": "P.S. 5 Port Morris",
+        "count_user": "6"
+    },
+    {
+        "id": "07X018",
+        "display_name": "P.S. 018 John Peter Zenger",
+        "count_user": "8"
+    },
+    {
+        "id": "07X029",
+        "display_name": "P.S./M.S. 029 Melrose School",
+        "count_user": "6"
+    },
+    {
+        "id": "07X030",
+        "display_name": "P.S. 030 Wilton",
+        "count_user": "5"
+    },
+    {
+        "id": "07X031",
+        "display_name": "P.S./M.S. 031 The William Lloyd Garrison",
+        "count_user": "5"
+    },
+    {
+        "id": "07X043",
+        "display_name": "P.S. 043 Jonas Bronck",
+        "count_user": "4"
+    },
+    {
+        "id": "07X049",
+        "display_name": "P.S. 049 Willis Avenue",
+        "count_user": "13"
+    },
+    {
+        "id": "07X065",
+        "display_name": "P.S. 065 Mother Hale Academy",
+        "count_user": "2"
+    },
+    {
+        "id": "07X154",
+        "display_name": "P.S. 154 Jonathan D. Hyatt",
+        "count_user": "1"
+    },
+    {
+        "id": "07X161",
+        "display_name": "P.S. 161 Juan Ponce De Leon School",
+        "count_user": "3"
+    },
+    {
+        "id": "07X179",
+        "display_name": "P.S. 179",
+        "count_user": "2"
+    },
+    {
+        "id": "07X221",
+        "display_name": "South Bronx Preparatory: A College Board School",
+        "count_user": "1"
+    },
+    {
+        "id": "07X224",
+        "display_name": "P.S./I.S. 224",
+        "count_user": "22"
+    },
+    {
+        "id": "07X277",
+        "display_name": "P.S. 277",
+        "count_user": "1"
+    },
+    {
+        "id": "07X298",
+        "display_name": "Academy of Public Relations",
+        "count_user": "142"
+    },
+    {
+        "id": "07X359",
+        "display_name": "Concourse Village Elementary School",
+        "count_user": "7"
+    },
+    {
+        "id": "07X369",
+        "display_name": "Young Leaders Elementary School",
+        "count_user": "4"
+    },
+    {
+        "id": "08X048",
+        "display_name": "P.S. 048 Joseph R. Drake",
+        "count_user": "2"
+    },
+    {
+        "id": "08X062",
+        "display_name": "P.S. 062 Inocensio Casanova",
+        "count_user": "2"
+    },
+    {
+        "id": "08X069",
+        "display_name": "P.S. 069 Journey Prep School",
+        "count_user": "2"
+    },
+    {
+        "id": "08X071",
+        "display_name": "P.S. 071 Rose E. Scala",
+        "count_user": "2"
+    },
+    {
+        "id": "08X072",
+        "display_name": "P.S. 072 Dr. William Dorney",
+        "count_user": "7"
+    },
+    {
+        "id": "08X093",
+        "display_name": "P.S. 093 Albert G. Oliver",
+        "count_user": "7"
+    },
+    {
+        "id": "08X100",
+        "display_name": "P.S. 100 Isaac Clason",
+        "count_user": "1"
+    },
+    {
+        "id": "08X107",
+        "display_name": "P.S. 107",
+        "count_user": "16"
+    },
+    {
+        "id": "08X119",
+        "display_name": "The Dr. Emmett W. Bassett School",
+        "count_user": "5"
+    },
+    {
+        "id": "08X123",
+        "display_name": "J.H.S. 123 James M. Kieran",
+        "count_user": "339"
+    },
+    {
+        "id": "08X138",
+        "display_name": "P.S. 138 Samuel Randall",
+        "count_user": "20"
+    },
+    {
+        "id": "08X140",
+        "display_name": "P.S. X140 The Eagle School",
+        "count_user": "1"
+    },
+    {
+        "id": "08X146",
+        "display_name": "P.S. 146 Edward Collins",
+        "count_user": "1"
+    },
+    {
+        "id": "08X152",
+        "display_name": "P.S. 152 Evergreen",
+        "count_user": "10"
+    },
+    {
+        "id": "08X182",
+        "display_name": "P.S. 182",
+        "count_user": "5"
+    },
+    {
+        "id": "08X304",
+        "display_name": "P.S. 304 Early Childhood School",
+        "count_user": "2"
+    },
+    {
+        "id": "08X333",
+        "display_name": "The Longwood Academy of Discovery",
+        "count_user": "6"
+    },
+    {
+        "id": "08X337",
+        "display_name": "The School for Inquiry and Social Justice",
+        "count_user": "1"
+    },
+    {
+        "id": "08X375",
+        "display_name": "The Bronx Mathematics Preparatory School",
+        "count_user": "19"
+    },
+    {
+        "id": "08X392",
+        "display_name": "Bronx Delta School",
+        "count_user": "12"
+    },
+    {
+        "id": "09X004",
+        "display_name": "P.S./M.S. 004 Crotona Park West",
+        "count_user": "3"
+    },
+    {
+        "id": "09X011",
+        "display_name": "P.S. 011 Highbridge",
+        "count_user": "10"
+    },
+    {
+        "id": "09X028",
+        "display_name": "P.S. 028 Mount Hope",
+        "count_user": "1"
+    },
+    {
+        "id": "09X035",
+        "display_name": "P.S. 035 Franz Siegel",
+        "count_user": "11"
+    },
+    {
+        "id": "09X055",
+        "display_name": "P.S. 055 Benjamin Franklin",
+        "count_user": "7"
+    },
+    {
+        "id": "09X058",
+        "display_name": "P.S. 058",
+        "count_user": "4"
+    },
+    {
+        "id": "09X063",
+        "display_name": "P.S. 063 Author's Academy",
+        "count_user": "11"
+    },
+    {
+        "id": "09X070",
+        "display_name": "P.S. 070 Max Schoenfeld",
+        "count_user": "5"
+    },
+    {
+        "id": "09X073",
+        "display_name": "P.S. 073 Bronx",
+        "count_user": "2"
+    },
+    {
+        "id": "09X088",
+        "display_name": "P.S. X088 - S. Silverstein Little Sparrow School",
+        "count_user": "1"
+    },
+    {
+        "id": "09X109",
+        "display_name": "P.S. 109 Sedgwick",
+        "count_user": "1"
+    },
+    {
+        "id": "09X132",
+        "display_name": "P.S. 132 Garret A. Morgan",
+        "count_user": "6"
+    },
+    {
+        "id": "09X204",
+        "display_name": "P.S. 204 Morris Heights",
+        "count_user": "1"
+    },
+    {
+        "id": "09X215",
+        "display_name": "Kappa",
+        "count_user": "71"
+    },
+    {
+        "id": "09X218",
+        "display_name": "P.S./I.S. 218 Rafael Hernandez Dual Language Magne",
+        "count_user": "6"
+    },
+    {
+        "id": "09X219",
+        "display_name": "I.S. 219 New Venture School",
+        "count_user": "55"
+    },
+    {
+        "id": "09X229",
+        "display_name": "I.S. 229 Roland Patterson",
+        "count_user": "1"
+    },
+    {
+        "id": "09X236",
+        "display_name": "P.S. 236 Langston Hughes",
+        "count_user": "1"
+    },
+    {
+        "id": "09X274",
+        "display_name": "The New American Academy at Roberto Clemente State",
+        "count_user": "4"
+    },
+    {
+        "id": "09X413",
+        "display_name": "Bronx High School for Medical Science",
+        "count_user": "1"
+    },
+    {
+        "id": "09X443",
+        "display_name": "The Family School",
+        "count_user": "5"
+    },
+    {
+        "id": "09X457",
+        "display_name": "Sheridan Academy for Young Leaders",
+        "count_user": "3"
+    },
+    {
+        "id": "09X505",
+        "display_name": "Bronx School for Law, Government and Justice",
+        "count_user": "2"
+    },
+    {
+        "id": "09X555",
+        "display_name": "Mount Eden Children's Academy",
+        "count_user": "1"
+    },
+    {
+        "id": "09X593",
+        "display_name": "South Bronx International Middle School",
+        "count_user": "2"
+    },
+    {
+        "id": "10X003",
+        "display_name": "P.S. 3 Raul Julia Micro Society",
+        "count_user": "1"
+    },
+    {
+        "id": "10X008",
+        "display_name": "P.S. 008 Isaac Varian",
+        "count_user": "15"
+    },
+    {
+        "id": "10X009",
+        "display_name": "P.S. 9 Ryer Avenue Elementary School",
+        "count_user": "6"
+    },
+    {
+        "id": "10X015",
+        "display_name": "P.S. X015 Institute for Environmental Learning",
+        "count_user": "1"
+    },
+    {
+        "id": "10X020",
+        "display_name": "PS/MS 20 P.O.George J. Werdann, III",
+        "count_user": "4"
+    },
+    {
+        "id": "10X032",
+        "display_name": "P.S. 032 Belmont",
+        "count_user": "6"
+    },
+    {
+        "id": "10X045",
+        "display_name": "Thomas C. Giordano Middle School 45",
+        "count_user": "4"
+    },
+    {
+        "id": "10X054",
+        "display_name": "P.S./I.S. 54",
+        "count_user": "6"
+    },
+    {
+        "id": "10X059",
+        "display_name": "P.S. 059 The Community School of Technology",
+        "count_user": "2"
+    },
+    {
+        "id": "10X077",
+        "display_name": "Bedford Park Elementary School",
+        "count_user": "2"
+    },
+    {
+        "id": "10X085",
+        "display_name": "P.S. 085 Great Expectations",
+        "count_user": "18"
+    },
+    {
+        "id": "10X091",
+        "display_name": "P.S. 091 Bronx",
+        "count_user": "1"
+    },
+    {
+        "id": "10X094",
+        "display_name": "P.S. 094 Kings College School",
+        "count_user": "8"
+    },
+    {
+        "id": "10X095",
+        "display_name": "P.S. 095 Sheila Mencher",
+        "count_user": "125"
+    },
+    {
+        "id": "10X118",
+        "display_name": "J.H.S. 118 William W. Niles",
+        "count_user": "1"
+    },
+    {
+        "id": "10X141",
+        "display_name": "Riverdale / Kingsbridge Academy (Middle School / H",
+        "count_user": "59"
+    },
+    {
+        "id": "10X205",
+        "display_name": "P.S. 205 Fiorello LaGuardia",
+        "count_user": "1"
+    },
+    {
+        "id": "10X228",
+        "display_name": "Jonas Bronck Academy",
+        "count_user": "1"
+    },
+    {
+        "id": "10X254",
+        "display_name": "I.S. 254",
+        "count_user": "5"
+    },
+    {
+        "id": "10X279",
+        "display_name": "P.S. 279 Captain Manuel Rivera, Jr.",
+        "count_user": "3"
+    },
+    {
+        "id": "10X280",
+        "display_name": "P.S./M.S. 280 Mosholu Parkway",
+        "count_user": "4"
+    },
+    {
+        "id": "10X306",
+        "display_name": "P.S. 306",
+        "count_user": "1"
+    },
+    {
+        "id": "10X307",
+        "display_name": "Luisa Pineiro Fuentes School of Science and Discov",
+        "count_user": "1"
+    },
+    {
+        "id": "10X310",
+        "display_name": "P.S. 310 Marble Hill",
+        "count_user": "16"
+    },
+    {
+        "id": "10X331",
+        "display_name": "The Bronx School of Young Leaders",
+        "count_user": "4"
+    },
+    {
+        "id": "10X340",
+        "display_name": "P.S. 340",
+        "count_user": "2"
+    },
+    {
+        "id": "10X342",
+        "display_name": "International School for Liberal Arts",
+        "count_user": "1"
+    },
+    {
+        "id": "10X360",
+        "display_name": "P.S. 360",
+        "count_user": "2"
+    },
+    {
+        "id": "10X382",
+        "display_name": "Elementary School for Math, Science, and Technolog",
+        "count_user": "3"
+    },
+    {
+        "id": "10X386",
+        "display_name": "School for Environmental Citizenship",
+        "count_user": "10"
+    },
+    {
+        "id": "10X390",
+        "display_name": "M.S. 390",
+        "count_user": "2"
+    },
+    {
+        "id": "11X016",
+        "display_name": "P.S. 016 Wakefield",
+        "count_user": "1"
+    },
+    {
+        "id": "11X019",
+        "display_name": "P.S. 019 Judith K. Weiss",
+        "count_user": "4"
+    },
+    {
+        "id": "11X068",
+        "display_name": "P.S. 068 Bronx",
+        "count_user": "6"
+    },
+    {
+        "id": "11X076",
+        "display_name": "P.S. 076 The Bennington School",
+        "count_user": "3"
+    },
+    {
+        "id": "11X078",
+        "display_name": "P.S. 078 Anne Hutchinson",
+        "count_user": "4"
+    },
+    {
+        "id": "11X083",
+        "display_name": "P.S. 083 Donald Hertz",
+        "count_user": "10"
+    },
+    {
+        "id": "11X089",
+        "display_name": "P.S. 089 Bronx",
+        "count_user": "10"
+    },
+    {
+        "id": "11X103",
+        "display_name": "P.S. 103 Hector Fontanez",
+        "count_user": "5"
+    },
+    {
+        "id": "11X111",
+        "display_name": "P.S. 111 Seton Falls",
+        "count_user": "2"
+    },
+    {
+        "id": "11X112",
+        "display_name": "P.S. 112 Bronxwood",
+        "count_user": "2"
+    },
+    {
+        "id": "11X121",
+        "display_name": "P.S. 121 Throop",
+        "count_user": "4"
+    },
+    {
+        "id": "11X127",
+        "display_name": "J.H.S. 127 The Castle Hill",
+        "count_user": "14"
+    },
+    {
+        "id": "11X144",
+        "display_name": "J.H.S. 144 Michelangelo",
+        "count_user": "62"
+    },
+    {
+        "id": "11X160",
+        "display_name": "P.S. 160 Walt Disney",
+        "count_user": "6"
+    },
+    {
+        "id": "11X169",
+        "display_name": "Baychester Academy",
+        "count_user": "1"
+    },
+    {
+        "id": "11X175",
+        "display_name": "P.S. 175 City Island",
+        "count_user": "70"
+    },
+    {
+        "id": "11X178",
+        "display_name": "P.S. 178 - Dr. Selman Waksman",
+        "count_user": "4"
+    },
+    {
+        "id": "11X189",
+        "display_name": "Cornerstone Academy for Social Action",
+        "count_user": "1"
+    },
+    {
+        "id": "11X287",
+        "display_name": "North Bronx School of Empowerment",
+        "count_user": "76"
+    },
+    {
+        "id": "11X326",
+        "display_name": "Bronx Green Middle School",
+        "count_user": "1"
+    },
+    {
+        "id": "11X357",
+        "display_name": "Young Voices Academy of the Bronx",
+        "count_user": "3"
+    },
+    {
+        "id": "11X370",
+        "display_name": "Leaders of Tomorrow",
+        "count_user": "4"
+    },
+    {
+        "id": "11X468",
+        "display_name": "Pelham Academy of Academics and Community Engageme",
+        "count_user": "3"
+    },
+    {
+        "id": "11X498",
+        "display_name": "P.S./M.S. 11X498 - Van Nest Academy",
+        "count_user": "98"
+    },
+    {
+        "id": "11X532",
+        "display_name": "Baychester Middle School",
+        "count_user": "82"
+    },
+    {
+        "id": "11X556",
+        "display_name": "Bronx Park Middle School",
+        "count_user": "20"
+    },
+    {
+        "id": "11X566",
+        "display_name": "Pelham Gardens Middle School",
+        "count_user": "19"
+    },
+    {
+        "id": "12X006",
+        "display_name": "P.S. 006 West Farms",
+        "count_user": "3"
+    },
+    {
+        "id": "12X047",
+        "display_name": "P.S. 047 John Randolph",
+        "count_user": "15"
+    },
+    {
+        "id": "12X061",
+        "display_name": "P.S. 061 Francisco Oller",
+        "count_user": "4"
+    },
+    {
+        "id": "12X066",
+        "display_name": "P.S. 066 School of Higher Expectations",
+        "count_user": "3"
+    },
+    {
+        "id": "12X067",
+        "display_name": "P.S. 067 Mohegan School",
+        "count_user": "7"
+    },
+    {
+        "id": "12X134",
+        "display_name": "P.S. 134 George F. Bristow",
+        "count_user": "10"
+    },
+    {
+        "id": "12X150",
+        "display_name": "P.S. 150 Charles James Fox",
+        "count_user": "18"
+    },
+    {
+        "id": "12X190",
+        "display_name": "E.S.M.T- I.S. 190",
+        "count_user": "92"
+    },
+    {
+        "id": "12X195",
+        "display_name": "P.S. 195",
+        "count_user": "10"
+    },
+    {
+        "id": "12X211",
+        "display_name": "P.S. 211",
+        "count_user": "2"
+    },
+    {
+        "id": "12X212",
+        "display_name": "P.S. 212",
+        "count_user": "3"
+    },
+    {
+        "id": "12X214",
+        "display_name": "P.S. 214",
+        "count_user": "71"
+    },
+    {
+        "id": "12X242",
+        "display_name": "Mott Hall V",
+        "count_user": "4"
+    },
+    {
+        "id": "12X271",
+        "display_name": "East Bronx Academy for the Future",
+        "count_user": "74"
+    },
+    {
+        "id": "12X286",
+        "display_name": "Fannie Lou Hamer Middle School",
+        "count_user": "1"
+    },
+    {
+        "id": "12X300",
+        "display_name": "The School of Science and Applied Learning",
+        "count_user": "3"
+    },
+    {
+        "id": "12X341",
+        "display_name": "Accion Academy",
+        "count_user": "1"
+    },
+    {
+        "id": "12X383",
+        "display_name": "Emolior Academy",
+        "count_user": "74"
+    },
+    {
+        "id": "12X458",
+        "display_name": "Samara Community School",
+        "count_user": "3"
+    },
+    {
+        "id": "12X463",
+        "display_name": "Urban Scholars Community School",
+        "count_user": "11"
+    },
+    {
+        "id": "12X691",
+        "display_name": "Bronx Little School",
+        "count_user": "1"
+    },
+    {
+        "id": "13K003",
+        "display_name": "P.S. 003 The Bedford Village",
+        "count_user": "6"
+    },
+    {
+        "id": "13K008",
+        "display_name": "P.S. 008 Robert Fulton",
+        "count_user": "10"
+    },
+    {
+        "id": "13K020",
+        "display_name": "P.S. 020 Clinton Hill",
+        "count_user": "7"
+    },
+    {
+        "id": "13K054",
+        "display_name": "P.S. 054 Samuel C. Barnes",
+        "count_user": "5"
+    },
+    {
+        "id": "13K067",
+        "display_name": "P.S. 067 Charles A. Dorsey",
+        "count_user": "1"
+    },
+    {
+        "id": "13K133",
+        "display_name": "P.S. 133 William A. Butler",
+        "count_user": "3"
+    },
+    {
+        "id": "13K270",
+        "display_name": "P.S. 270 Johann DeKalb",
+        "count_user": "4"
+    },
+    {
+        "id": "13K305",
+        "display_name": "P.S. 305 Dr. Peter Ray",
+        "count_user": "1"
+    },
+    {
+        "id": "13K307",
+        "display_name": "P.S. 307 Daniel Hale Williams",
+        "count_user": "2"
+    },
+    {
+        "id": "13K313",
+        "display_name": "Dock Street School for STEAM Studies",
+        "count_user": "4"
+    },
+    {
+        "id": "13K351",
+        "display_name": "The Urban Assembly Unison School",
+        "count_user": "3"
+    },
+    {
+        "id": "13K691",
+        "display_name": "Fort Greene Preparatory Academy",
+        "count_user": "87"
+    },
+    {
+        "id": "14K023",
+        "display_name": "P.S. 023 Carter G. Woodson",
+        "count_user": "2"
+    },
+    {
+        "id": "14K034",
+        "display_name": "P.S. 034 Oliver H. Perry",
+        "count_user": "4"
+    },
+    {
+        "id": "14K059",
+        "display_name": "P.S. 059 William Floyd",
+        "count_user": "1"
+    },
+    {
+        "id": "14K071",
+        "display_name": "Juan Morel Campos Secondary School",
+        "count_user": "96"
+    },
+    {
+        "id": "14K084",
+        "display_name": "P.S. 084 Jose De Diego",
+        "count_user": "65"
+    },
+    {
+        "id": "14K110",
+        "display_name": "P.S. 110 The Monitor",
+        "count_user": "1"
+    },
+    {
+        "id": "14K132",
+        "display_name": "P.S. 132 The Conselyea School",
+        "count_user": "8"
+    },
+    {
+        "id": "14K147",
+        "display_name": "P.S. 147 Isaac Remsen",
+        "count_user": "2"
+    },
+    {
+        "id": "14K157",
+        "display_name": "P.S./I.S. 157 The Benjamin Franklin Health \u0026 Scien",
+        "count_user": "3"
+    },
+    {
+        "id": "14K250",
+        "display_name": "P.S. 250 George H. Lindsay",
+        "count_user": "3"
+    },
+    {
+        "id": "14K257",
+        "display_name": "P.S. 257 John F. Hylan",
+        "count_user": "4"
+    },
+    {
+        "id": "14K414",
+        "display_name": "Brooklyn Arbor Elementary School",
+        "count_user": "15"
+    },
+    {
+        "id": "14K577",
+        "display_name": "Conselyea Preparatory School",
+        "count_user": "1"
+    },
+    {
+        "id": "14K582",
+        "display_name": "M.S. 582",
+        "count_user": "3"
+    },
+    {
+        "id": "14K586",
+        "display_name": "Lyons Community School",
+        "count_user": "70"
+    },
+    {
+        "id": "15K001",
+        "display_name": "P.S. 001 The Bergen",
+        "count_user": "13"
+    },
+    {
+        "id": "15K015",
+        "display_name": "P.S. 015 Patrick F. Daly",
+        "count_user": "1"
+    },
+    {
+        "id": "15K024",
+        "display_name": "P.S. 024",
+        "count_user": "1"
+    },
+    {
+        "id": "15K032",
+        "display_name": "P.S. 032 Samuel Mills Sprole",
+        "count_user": "1"
+    },
+    {
+        "id": "15K058",
+        "display_name": "P.S. 058 The Carroll",
+        "count_user": "1"
+    },
+    {
+        "id": "15K094",
+        "display_name": "P.S. 094 The Henry Longfellow",
+        "count_user": "34"
+    },
+    {
+        "id": "15K124",
+        "display_name": "P.S. 124 Silas B. Dutcher",
+        "count_user": "1"
+    },
+    {
+        "id": "15K130",
+        "display_name": "P.S. 130 The Parkside",
+        "count_user": "1"
+    },
+    {
+        "id": "15K154",
+        "display_name": "The Windsor Terrace School",
+        "count_user": "8"
+    },
+    {
+        "id": "15K169",
+        "display_name": "P.S. 169 Sunset Park",
+        "count_user": "3"
+    },
+    {
+        "id": "15K261",
+        "display_name": "P.S. 261 Philip Livingston",
+        "count_user": "1"
+    },
+    {
+        "id": "15K896",
+        "display_name": "The School of Creativity and Innovation",
+        "count_user": "1"
+    },
+    {
+        "id": "16K005",
+        "display_name": "P.S. 005 Dr. Ronald McNair",
+        "count_user": "4"
+    },
+    {
+        "id": "16K021",
+        "display_name": "P.S. 021 Crispus Attucks",
+        "count_user": "4"
+    },
+    {
+        "id": "16K026",
+        "display_name": "P.S. 026 Jesse Owens",
+        "count_user": "5"
+    },
+    {
+        "id": "16K028",
+        "display_name": "P.S. 028 The Warren Prep Academy",
+        "count_user": "1"
+    },
+    {
+        "id": "16K035",
+        "display_name": "M.S. 035 Stephen Decatur",
+        "count_user": "1"
+    },
+    {
+        "id": "16K040",
+        "display_name": "P.S. 040 George W. Carver",
+        "count_user": "1"
+    },
+    {
+        "id": "16K081",
+        "display_name": "P.S. 081 Thaddeus Stevens",
+        "count_user": "4"
+    },
+    {
+        "id": "16K243",
+        "display_name": "P.S. 243K- The Weeksville School",
+        "count_user": "2"
+    },
+    {
+        "id": "16K267",
+        "display_name": "M.S. 267 Math, Science \u0026 Technology",
+        "count_user": "2"
+    },
+    {
+        "id": "16K308",
+        "display_name": "P.S. 308 Clara Cardwell",
+        "count_user": "3"
+    },
+    {
+        "id": "16K335",
+        "display_name": "P.S. 335 Granville T. Woods",
+        "count_user": "5"
+    },
+    {
+        "id": "16K627",
+        "display_name": "Brighter Choice Community School",
+        "count_user": "2"
+    },
+    {
+        "id": "16K628",
+        "display_name": "Brooklyn Brownstone School",
+        "count_user": "4"
+    },
+    {
+        "id": "16K681",
+        "display_name": "Madiba Prep Middle School",
+        "count_user": "3"
+    },
+    {
+        "id": "16K898",
+        "display_name": "The Brooklyn Green School",
+        "count_user": "1"
+    },
+    {
+        "id": "17K002",
+        "display_name": "Parkside Preparatory Academy",
+        "count_user": "2"
+    },
+    {
+        "id": "17K006",
+        "display_name": "Norma Adams Clemons Academy",
+        "count_user": "16"
+    },
+    {
+        "id": "17K061",
+        "display_name": "M.S. 061 Dr. Gladstone H. Atwell",
+        "count_user": "4"
+    },
+    {
+        "id": "17K091",
+        "display_name": "P.S. 091 The Albany Avenue School",
+        "count_user": "6"
+    },
+    {
+        "id": "17K092",
+        "display_name": "P.S. 092 Adrian Hegeman",
+        "count_user": "5"
+    },
+    {
+        "id": "17K161",
+        "display_name": "P.S. 161 The Crown",
+        "count_user": "1"
+    },
+    {
+        "id": "17K181",
+        "display_name": "P.S. 181 Brooklyn",
+        "count_user": "6"
+    },
+    {
+        "id": "17K189",
+        "display_name": "P.S. 189 The Bilingual Center",
+        "count_user": "25"
+    },
+    {
+        "id": "17K221",
+        "display_name": "P.S. 221 Toussaint L'Ouverture",
+        "count_user": "1"
+    },
+    {
+        "id": "17K241",
+        "display_name": "P.S. 241 Emma L. Johnston",
+        "count_user": "2"
+    },
+    {
+        "id": "17K246",
+        "display_name": "M.S. 246 Walt Whitman",
+        "count_user": "6"
+    },
+    {
+        "id": "17K353",
+        "display_name": "Elijah Stroud Middle School",
+        "count_user": "2"
+    },
+    {
+        "id": "17K375",
+        "display_name": "P.S. 375 Jackie Robinson School",
+        "count_user": "5"
+    },
+    {
+        "id": "17K382",
+        "display_name": "Academy for College Preparation and Career Explora",
+        "count_user": "1"
+    },
+    {
+        "id": "17K394",
+        "display_name": "M.S. K394",
+        "count_user": "91"
+    },
+    {
+        "id": "17K399",
+        "display_name": "P.S. 399 Stanley Eugene Clark",
+        "count_user": "6"
+    },
+    {
+        "id": "17K543",
+        "display_name": "Science, Technology and Research Early College Hig",
+        "count_user": "2"
+    },
+    {
+        "id": "17K705",
+        "display_name": "Brooklyn Arts and Science Elementary School",
+        "count_user": "8"
+    },
+    {
+        "id": "17K770",
+        "display_name": "P.S. 770 New American Academy",
+        "count_user": "2"
+    },
+    {
+        "id": "18K114",
+        "display_name": "P.S. 114 Ryder Elementary",
+        "count_user": "7"
+    },
+    {
+        "id": "18K219",
+        "display_name": "P.S. 219 Kennedy-King",
+        "count_user": "4"
+    },
+    {
+        "id": "18K233",
+        "display_name": "P.S. 233 Langston Hughes",
+        "count_user": "1"
+    },
+    {
+        "id": "18K272",
+        "display_name": "P.S. 272 Curtis Estabrook",
+        "count_user": "10"
+    },
+    {
+        "id": "18K276",
+        "display_name": "P.S. 276 Louis Marshall",
+        "count_user": "7"
+    },
+    {
+        "id": "18K279",
+        "display_name": "P.S. 279 Herman Schreiber",
+        "count_user": "1"
+    },
+    {
+        "id": "18K763",
+        "display_name": "Brooklyn Science and Engineering Academy",
+        "count_user": "2"
+    },
+    {
+        "id": "19K007",
+        "display_name": "P.S. 007 Abraham Lincoln",
+        "count_user": "2"
+    },
+    {
+        "id": "19K013",
+        "display_name": "P.S. 013 Roberto Clemente",
+        "count_user": "2"
+    },
+    {
+        "id": "19K158",
+        "display_name": "P.S. 158 Warwick",
+        "count_user": "1"
+    },
+    {
+        "id": "19K190",
+        "display_name": "P.S. 190 Sheffield",
+        "count_user": "2"
+    },
+    {
+        "id": "19K213",
+        "display_name": "P.S. 213 New Lots",
+        "count_user": "2"
+    },
+    {
+        "id": "19K214",
+        "display_name": "P.S. 214 Michael Friedsam",
+        "count_user": "7"
+    },
+    {
+        "id": "19K224",
+        "display_name": "P.S. 224 Hale A. Woodruff",
+        "count_user": "1"
+    },
+    {
+        "id": "19K273",
+        "display_name": "P.S. 273 Wortman",
+        "count_user": "7"
+    },
+    {
+        "id": "19K306",
+        "display_name": "P.S. 306 Ethan Allen",
+        "count_user": "5"
+    },
+    {
+        "id": "19K325",
+        "display_name": "The Fresh Creek School",
+        "count_user": "3"
+    },
+    {
+        "id": "19K328",
+        "display_name": "P.S. 328 Phyllis Wheatley",
+        "count_user": "3"
+    },
+    {
+        "id": "19K364",
+        "display_name": "I.S. 364 Gateway",
+        "count_user": "1"
+    },
+    {
+        "id": "19K404",
+        "display_name": "Academy for Young Writers",
+        "count_user": "6"
+    },
+    {
+        "id": "19K422",
+        "display_name": "Spring Creek Community School",
+        "count_user": "2"
+    },
+    {
+        "id": "19K557",
+        "display_name": "Brooklyn Gardens Elementary School",
+        "count_user": "1"
+    },
+    {
+        "id": "19K654",
+        "display_name": "Van Siclen Community Middle School",
+        "count_user": "61"
+    },
+    {
+        "id": "19K662",
+        "display_name": "Liberty Avenue Middle School",
+        "count_user": "49"
+    },
+    {
+        "id": "20K030",
+        "display_name": "P.S./I.S. 30 Mary White Ovington",
+        "count_user": "248"
+    },
+    {
+        "id": "20K048",
+        "display_name": "P.S. 048 Mapleton",
+        "count_user": "7"
+    },
+    {
+        "id": "20K069",
+        "display_name": "P.S. 69 Vincent D. Grippo School",
+        "count_user": "4"
+    },
+    {
+        "id": "20K104",
+        "display_name": "P.S./I.S. 104 The Fort Hamilton School",
+        "count_user": "10"
+    },
+    {
+        "id": "20K105",
+        "display_name": "P.S. 105 The Blythebourne",
+        "count_user": "33"
+    },
+    {
+        "id": "20K127",
+        "display_name": "P.S. 127 Mckinley Park",
+        "count_user": "3"
+    },
+    {
+        "id": "20K160",
+        "display_name": "P.S. 160 William T. Sampson",
+        "count_user": "4"
+    },
+    {
+        "id": "20K164",
+        "display_name": "P.S. 164 Caesar Rodney",
+        "count_user": "16"
+    },
+    {
+        "id": "20K176",
+        "display_name": "P.S. 176 Ovington",
+        "count_user": "2"
+    },
+    {
+        "id": "20K179",
+        "display_name": "P.S. 179 Kensington",
+        "count_user": "2"
+    },
+    {
+        "id": "20K185",
+        "display_name": "P.S. 185 Walter Kassenbrock",
+        "count_user": "2"
+    },
+    {
+        "id": "20K186",
+        "display_name": "P.S. 186 Dr. Irving A Gladstone",
+        "count_user": "1"
+    },
+    {
+        "id": "20K192",
+        "display_name": "P.S. 192 - The Magnet School for Math and Science",
+        "count_user": "4"
+    },
+    {
+        "id": "20K200",
+        "display_name": "P.S. 200 Benson School",
+        "count_user": "13"
+    },
+    {
+        "id": "20K204",
+        "display_name": "P.S. 204 Vince Lombardi",
+        "count_user": "44"
+    },
+    {
+        "id": "20K220",
+        "display_name": "J.H.S. 220 John J. Pershing",
+        "count_user": "1"
+    },
+    {
+        "id": "20K223",
+        "display_name": "J.H.S. 223 The Montauk",
+        "count_user": "1"
+    },
+    {
+        "id": "20K229",
+        "display_name": "P.S. 229 Dyker",
+        "count_user": "3"
+    },
+    {
+        "id": "20K259",
+        "display_name": "J.H.S. 259 William McKinley",
+        "count_user": "1"
+    },
+    {
+        "id": "20K264",
+        "display_name": "P.S. 264 Bay Ridge Elementary School For The Arts",
+        "count_user": "5"
+    },
+    {
+        "id": "20K310",
+        "display_name": "The School For Future Leaders",
+        "count_user": "2"
+    },
+    {
+        "id": "20K503",
+        "display_name": "P.S. 503: The School of Discovery",
+        "count_user": "1"
+    },
+    {
+        "id": "20K506",
+        "display_name": "P.S. 506: The School of Journalism \u0026 Technology",
+        "count_user": "8"
+    },
+    {
+        "id": "20K682",
+        "display_name": "The Academy of Talented Scholars",
+        "count_user": "6"
+    },
+    {
+        "id": "20K971",
+        "display_name": "School of Math, Science, and Healthy Living",
+        "count_user": "1"
+    },
+    {
+        "id": "21K095",
+        "display_name": "P.S. 095 The Gravesend",
+        "count_user": "2"
+    },
+    {
+        "id": "21K098",
+        "display_name": "I.S. 98 Bay Academy",
+        "count_user": "5"
+    },
+    {
+        "id": "21K099",
+        "display_name": "P.S. 099 Isaac Asimov",
+        "count_user": "4"
+    },
+    {
+        "id": "21K100",
+        "display_name": "P.S. 100 The Coney Island School",
+        "count_user": "7"
+    },
+    {
+        "id": "21K101",
+        "display_name": "P.S. 101 The Verrazano",
+        "count_user": "3"
+    },
+    {
+        "id": "21K128",
+        "display_name": "P.S. 128 Bensonhurst",
+        "count_user": "7"
+    },
+    {
+        "id": "21K153",
+        "display_name": "P.S. 153 Homecrest",
+        "count_user": "7"
+    },
+    {
+        "id": "21K177",
+        "display_name": "P.S. 177 The Marlboro",
+        "count_user": "2"
+    },
+    {
+        "id": "21K188",
+        "display_name": "P.S. 188 Michael E. Berdy",
+        "count_user": "2"
+    },
+    {
+        "id": "21K199",
+        "display_name": "P.S. 199 Frederick Wachtel",
+        "count_user": "3"
+    },
+    {
+        "id": "21K209",
+        "display_name": "P.S. 209 Margaret Mead",
+        "count_user": "3"
+    },
+    {
+        "id": "21K212",
+        "display_name": "P.S. 212 Lady Deborah Moody",
+        "count_user": "1"
+    },
+    {
+        "id": "21K215",
+        "display_name": "P.S. 215 Morris H. Weiss",
+        "count_user": "11"
+    },
+    {
+        "id": "21K216",
+        "display_name": "P.S. 216 Arturo Toscanini",
+        "count_user": "9"
+    },
+    {
+        "id": "21K225",
+        "display_name": "P.S. K225 - The Eileen E. Zaglin",
+        "count_user": "1"
+    },
+    {
+        "id": "21K226",
+        "display_name": "P.S. 226 Alfred De B. Mason",
+        "count_user": "110"
+    },
+    {
+        "id": "21K228",
+        "display_name": "I.S. 228 David A. Boody",
+        "count_user": "2"
+    },
+    {
+        "id": "21K238",
+        "display_name": "P.S. 238 Anne Sullivan",
+        "count_user": "7"
+    },
+    {
+        "id": "21K253",
+        "display_name": "P.S. 253",
+        "count_user": "2"
+    },
+    {
+        "id": "21K281",
+        "display_name": "I.S. 281 Joseph B Cavallaro",
+        "count_user": "172"
+    },
+    {
+        "id": "21K288",
+        "display_name": "P.S. 288 The Shirley Tanyhill",
+        "count_user": "4"
+    },
+    {
+        "id": "21K329",
+        "display_name": "P.S. 329 Surfside",
+        "count_user": "6"
+    },
+    {
+        "id": "22K014",
+        "display_name": "J.H.S. 014 Shell Bank",
+        "count_user": "1"
+    },
+    {
+        "id": "22K052",
+        "display_name": "P.S. 052 Sheepshead Bay",
+        "count_user": "19"
+    },
+    {
+        "id": "22K078",
+        "display_name": "J.H.S. 078 Roy H. Mann",
+        "count_user": "2"
+    },
+    {
+        "id": "22K109",
+        "display_name": "P.S. 109",
+        "count_user": "5"
+    },
+    {
+        "id": "22K119",
+        "display_name": "P.S. 119 Amersfort",
+        "count_user": "4"
+    },
+    {
+        "id": "22K134",
+        "display_name": "P.S. K134",
+        "count_user": "4"
+    },
+    {
+        "id": "22K152",
+        "display_name": "School of Science \u0026 Technology",
+        "count_user": "14"
+    },
+    {
+        "id": "22K193",
+        "display_name": "P.S. 193 Gil Hodges",
+        "count_user": "19"
+    },
+    {
+        "id": "22K194",
+        "display_name": "P.S. 194 Raoul Wallenberg",
+        "count_user": "10"
+    },
+    {
+        "id": "22K195",
+        "display_name": "P.S. 195 Manhattan Beach",
+        "count_user": "12"
+    },
+    {
+        "id": "22K197",
+        "display_name": "P.S. 197 - The Kings Highway Academy",
+        "count_user": "12"
+    },
+    {
+        "id": "22K198",
+        "display_name": "P.S. 198 Brooklyn",
+        "count_user": "4"
+    },
+    {
+        "id": "22K203",
+        "display_name": "P.S. 203 Floyd Bennett School",
+        "count_user": "17"
+    },
+    {
+        "id": "22K206",
+        "display_name": "P.S. 206 Joseph F Lamb",
+        "count_user": "164"
+    },
+    {
+        "id": "22K207",
+        "display_name": "P.S. 207 Elizabeth G. Leary",
+        "count_user": "114"
+    },
+    {
+        "id": "22K217",
+        "display_name": "P.S. 217 Colonel David Marcus School",
+        "count_user": "9"
+    },
+    {
+        "id": "22K222",
+        "display_name": "P.S. 222 Katherine R. Snyder",
+        "count_user": "4"
+    },
+    {
+        "id": "22K245",
+        "display_name": "P.S. 245",
+        "count_user": "5"
+    },
+    {
+        "id": "22K251",
+        "display_name": "P.S. 251 Paerdegat",
+        "count_user": "6"
+    },
+    {
+        "id": "22K254",
+        "display_name": "P.S. 254 Dag Hammarskjold",
+        "count_user": "2"
+    },
+    {
+        "id": "22K255",
+        "display_name": "P.S. 255 Barbara Reing School",
+        "count_user": "28"
+    },
+    {
+        "id": "22K277",
+        "display_name": "P.S. 277 Gerritsen Beach",
+        "count_user": "16"
+    },
+    {
+        "id": "22K278",
+        "display_name": "J.H.S. 278 Marine Park",
+        "count_user": "9"
+    },
+    {
+        "id": "22K312",
+        "display_name": "P.S. 312 Bergen Beach",
+        "count_user": "23"
+    },
+    {
+        "id": "22K315",
+        "display_name": "P.S. K315",
+        "count_user": "14"
+    },
+    {
+        "id": "22K381",
+        "display_name": "I. S. 381",
+        "count_user": "1"
+    },
+    {
+        "id": "22K889",
+        "display_name": "P.S. 889",
+        "count_user": "5"
+    },
+    {
+        "id": "22K890",
+        "display_name": "M.S. 890",
+        "count_user": "3"
+    },
+    {
+        "id": "23K041",
+        "display_name": "P.S. 041 Francis White",
+        "count_user": "33"
+    },
+    {
+        "id": "23K137",
+        "display_name": "P.S./I.S. 137 Rachel Jean Mitchell",
+        "count_user": "2"
+    },
+    {
+        "id": "23K156",
+        "display_name": "P.S. 156 Waverly",
+        "count_user": "4"
+    },
+    {
+        "id": "23K178",
+        "display_name": "P.S. 178 Saint Clair Mckelway",
+        "count_user": "1"
+    },
+    {
+        "id": "23K323",
+        "display_name": "P.S./I.S. 323",
+        "count_user": "9"
+    },
+    {
+        "id": "23K327",
+        "display_name": "P.S. 327 Dr. Rose B. English",
+        "count_user": "3"
+    },
+    {
+        "id": "23K392",
+        "display_name": "I.S. 392",
+        "count_user": "25"
+    },
+    {
+        "id": "23K401",
+        "display_name": "Christopher Avenue Community School",
+        "count_user": "2"
+    },
+    {
+        "id": "23K522",
+        "display_name": "Mott Hall IV",
+        "count_user": "9"
+    },
+    {
+        "id": "23K668",
+        "display_name": "Riverdale Avenue Middle School",
+        "count_user": "1"
+    },
+    {
+        "id": "24Q007",
+        "display_name": "P.S. 007 Louis F. Simeone",
+        "count_user": "2"
+    },
+    {
+        "id": "24Q012",
+        "display_name": "P.S. 012 James B. Colgate",
+        "count_user": "2"
+    },
+    {
+        "id": "24Q014",
+        "display_name": "P.S. 014 Fairview",
+        "count_user": "10"
+    },
+    {
+        "id": "24Q016",
+        "display_name": "P.S. Q016 The Nancy DeBenedittis School",
+        "count_user": "17"
+    },
+    {
+        "id": "24Q019",
+        "display_name": "P.S. 019 Marino Jeantet",
+        "count_user": "8"
+    },
+    {
+        "id": "24Q028",
+        "display_name": "P.S. 28 - The Thomas Emanuel Early Childhood Cente",
+        "count_user": "10"
+    },
+    {
+        "id": "24Q049",
+        "display_name": "P.S. 049 Dorothy Bonawit Kole",
+        "count_user": "364"
+    },
+    {
+        "id": "24Q058",
+        "display_name": "P.S. 58 - The School of Heroes",
+        "count_user": "6"
+    },
+    {
+        "id": "24Q068",
+        "display_name": "P.S. 068 Cambridge",
+        "count_user": "5"
+    },
+    {
+        "id": "24Q071",
+        "display_name": "P.S. 071 Forest",
+        "count_user": "3"
+    },
+    {
+        "id": "24Q073",
+        "display_name": "I.S. 73 - The Frank Sansivieri Intermediate School",
+        "count_user": "2"
+    },
+    {
+        "id": "24Q077",
+        "display_name": "I.S. 077",
+        "count_user": "4"
+    },
+    {
+        "id": "24Q087",
+        "display_name": "P.S./I.S. 087 Middle Village",
+        "count_user": "52"
+    },
+    {
+        "id": "24Q088",
+        "display_name": "P.S. 088 Seneca",
+        "count_user": "5"
+    },
+    {
+        "id": "24Q089",
+        "display_name": "P.S. 089 Elmhurst",
+        "count_user": "3"
+    },
+    {
+        "id": "24Q091",
+        "display_name": "P.S. 091 Richard Arkwright",
+        "count_user": "1"
+    },
+    {
+        "id": "24Q093",
+        "display_name": "I.S. 093 Ridgewood",
+        "count_user": "109"
+    },
+    {
+        "id": "24Q102",
+        "display_name": "P.S. 102 Bayview",
+        "count_user": "18"
+    },
+    {
+        "id": "24Q110",
+        "display_name": "P.S. 110",
+        "count_user": "1"
+    },
+    {
+        "id": "24Q113",
+        "display_name": "P.S./I.S. 113 Anthony J. Pranzo",
+        "count_user": "59"
+    },
+    {
+        "id": "24Q119",
+        "display_name": "P.S./I.S. 119 The Glendale",
+        "count_user": "403"
+    },
+    {
+        "id": "24Q143",
+        "display_name": "P.S. 143 Louis Armstrong",
+        "count_user": "1"
+    },
+    {
+        "id": "24Q153",
+        "display_name": "P.S. 153 Maspeth Elem",
+        "count_user": "9"
+    },
+    {
+        "id": "24Q199",
+        "display_name": "P.S. 199 Maurice A. Fitzgerald",
+        "count_user": "5"
+    },
+    {
+        "id": "24Q229",
+        "display_name": "P.S. 229 Emanuel Kaplan",
+        "count_user": "11"
+    },
+    {
+        "id": "24Q290",
+        "display_name": "A.C.E. Academy for Scholars at the Geraldine Ferra",
+        "count_user": "2"
+    },
+    {
+        "id": "24Q305",
+        "display_name": "Learners and Leaders",
+        "count_user": "1"
+    },
+    {
+        "id": "24Q307",
+        "display_name": "Pioneer Academy",
+        "count_user": "26"
+    },
+    {
+        "id": "24Q311",
+        "display_name": "Corona Arts \u0026 Sciences Academy",
+        "count_user": "6"
+    },
+    {
+        "id": "24Q343",
+        "display_name": "The Children's Lab School",
+        "count_user": "4"
+    },
+    {
+        "id": "25Q020",
+        "display_name": "P.S. 020 John Bowne",
+        "count_user": "10"
+    },
+    {
+        "id": "25Q021",
+        "display_name": "P.S. 021 Edward Hart",
+        "count_user": "9"
+    },
+    {
+        "id": "25Q022",
+        "display_name": "P.S. 022 Thomas Jefferson",
+        "count_user": "24"
+    },
+    {
+        "id": "25Q024",
+        "display_name": "P.S. 024 Andrew Jackson",
+        "count_user": "13"
+    },
+    {
+        "id": "25Q025",
+        "display_name": "I.S. 025 Adrien Block",
+        "count_user": "4"
+    },
+    {
+        "id": "25Q029",
+        "display_name": "P.S. 029 Queens",
+        "count_user": "8"
+    },
+    {
+        "id": "25Q032",
+        "display_name": "P.S. 032 State Street",
+        "count_user": "4"
+    },
+    {
+        "id": "25Q107",
+        "display_name": "P.S. 107 Thomas A Dooley",
+        "count_user": "11"
+    },
+    {
+        "id": "25Q120",
+        "display_name": "P.S. 120 Queens",
+        "count_user": "12"
+    },
+    {
+        "id": "25Q129",
+        "display_name": "P.S. 129 Patricia Larkin",
+        "count_user": "5"
+    },
+    {
+        "id": "25Q130",
+        "display_name": "P.S. 130",
+        "count_user": "4"
+    },
+    {
+        "id": "25Q154",
+        "display_name": "P.S. 154 Queens",
+        "count_user": "4"
+    },
+    {
+        "id": "25Q163",
+        "display_name": "P.S. 163 Flushing Heights",
+        "count_user": "8"
+    },
+    {
+        "id": "25Q164",
+        "display_name": "P.S. 164 Queens Valley",
+        "count_user": "20"
+    },
+    {
+        "id": "25Q165",
+        "display_name": "P.S. 165 Edith K. Bergtraum",
+        "count_user": "13"
+    },
+    {
+        "id": "25Q169",
+        "display_name": "P.S. 169 Bay Terrace",
+        "count_user": "9"
+    },
+    {
+        "id": "25Q184",
+        "display_name": "P.S. 184 Flushing Manor",
+        "count_user": "9"
+    },
+    {
+        "id": "25Q194",
+        "display_name": "J.H.S. 194 William Carr",
+        "count_user": "225"
+    },
+    {
+        "id": "25Q200",
+        "display_name": "P.S./M.S. 200 - The Magnet School of Global Studie",
+        "count_user": "2"
+    },
+    {
+        "id": "25Q237",
+        "display_name": "I.S. 237",
+        "count_user": "100"
+    },
+    {
+        "id": "25Q294",
+        "display_name": "BELL Academy",
+        "count_user": "3"
+    },
+    {
+        "id": "25Q379",
+        "display_name": "College Point Collaborative",
+        "count_user": "3"
+    },
+    {
+        "id": "25Q499",
+        "display_name": "The Queens College School for Math, Science and Te",
+        "count_user": "2"
+    },
+    {
+        "id": "26Q026",
+        "display_name": "P.S. 026 Rufus King",
+        "count_user": "5"
+    },
+    {
+        "id": "26Q031",
+        "display_name": "P.S. 031 Bayside",
+        "count_user": "15"
+    },
+    {
+        "id": "26Q041",
+        "display_name": "P.S. 041 Crocheron",
+        "count_user": "11"
+    },
+    {
+        "id": "26Q067",
+        "display_name": "J.H.S. 067 Louis Pasteur",
+        "count_user": "77"
+    },
+    {
+        "id": "26Q094",
+        "display_name": "P.S. 094 David D. Porter",
+        "count_user": "2"
+    },
+    {
+        "id": "26Q098",
+        "display_name": "P.S. 098 The Douglaston School",
+        "count_user": "6"
+    },
+    {
+        "id": "26Q115",
+        "display_name": "The James J. Ambrose School",
+        "count_user": "13"
+    },
+    {
+        "id": "26Q133",
+        "display_name": "P.S. 133 Queens",
+        "count_user": "15"
+    },
+    {
+        "id": "26Q159",
+        "display_name": "P.S. 159",
+        "count_user": "14"
+    },
+    {
+        "id": "26Q162",
+        "display_name": "P.S. 162 John Golden",
+        "count_user": "8"
+    },
+    {
+        "id": "26Q172",
+        "display_name": "Irwin Altman Middle School 172",
+        "count_user": "4"
+    },
+    {
+        "id": "26Q173",
+        "display_name": "P.S. 173 Fresh Meadows",
+        "count_user": "6"
+    },
+    {
+        "id": "26Q178",
+        "display_name": "P.S./ IS 178 Holliswood",
+        "count_user": "8"
+    },
+    {
+        "id": "26Q186",
+        "display_name": "P.S. 186 Castlewood",
+        "count_user": "14"
+    },
+    {
+        "id": "26Q188",
+        "display_name": "P.S. 188 Kingsbury",
+        "count_user": "15"
+    },
+    {
+        "id": "26Q203",
+        "display_name": "P.S. 203 Oakland Gardens",
+        "count_user": "13"
+    },
+    {
+        "id": "26Q205",
+        "display_name": "P.S. 205 Alexander Graham Bell",
+        "count_user": "1"
+    },
+    {
+        "id": "26Q213",
+        "display_name": "P.S. 213 The Carl Ullman School",
+        "count_user": "2"
+    },
+    {
+        "id": "26Q266",
+        "display_name": "P.S./I.S. 266",
+        "count_user": "8"
+    },
+    {
+        "id": "26Q376",
+        "display_name": "P.S. 376",
+        "count_user": "5"
+    },
+    {
+        "id": "27Q042",
+        "display_name": "P.S./M.S 042 R. Vernam",
+        "count_user": "4"
+    },
+    {
+        "id": "27Q043",
+        "display_name": "P.S. 043",
+        "count_user": "9"
+    },
+    {
+        "id": "27Q047",
+        "display_name": "P.S. 047 Chris Galas",
+        "count_user": "6"
+    },
+    {
+        "id": "27Q051",
+        "display_name": "P.S. 051",
+        "count_user": "1"
+    },
+    {
+        "id": "27Q053",
+        "display_name": "M.S. 053 Brian Piccolo",
+        "count_user": "3"
+    },
+    {
+        "id": "27Q056",
+        "display_name": "P.S. 056 Harry Eichler",
+        "count_user": "4"
+    },
+    {
+        "id": "27Q063",
+        "display_name": "P.S. 063 Old South",
+        "count_user": "1"
+    },
+    {
+        "id": "27Q066",
+        "display_name": "P.S. 066 Jacqueline Kennedy Onassis",
+        "count_user": "2"
+    },
+    {
+        "id": "27Q090",
+        "display_name": "P.S. 090 Horace Mann",
+        "count_user": "2"
+    },
+    {
+        "id": "27Q097",
+        "display_name": "P.S. 097 Forest Park",
+        "count_user": "4"
+    },
+    {
+        "id": "27Q100",
+        "display_name": "P.S. 100 Glen Morris",
+        "count_user": "2"
+    },
+    {
+        "id": "27Q104",
+        "display_name": "P.S. 104 The Bays Water",
+        "count_user": "3"
+    },
+    {
+        "id": "27Q105",
+        "display_name": "P.S. 105 The Bay School",
+        "count_user": "5"
+    },
+    {
+        "id": "27Q106",
+        "display_name": "Lighthouse Elementary School",
+        "count_user": "3"
+    },
+    {
+        "id": "27Q114",
+        "display_name": "P.S./M.S. 114 Belle Harbor",
+        "count_user": "4"
+    },
+    {
+        "id": "27Q123",
+        "display_name": "P.S. 123",
+        "count_user": "18"
+    },
+    {
+        "id": "27Q124",
+        "display_name": "P.S. 124 Osmond A Church",
+        "count_user": "3"
+    },
+    {
+        "id": "27Q137",
+        "display_name": "M.S. 137 America's School of Heroes",
+        "count_user": "1"
+    },
+    {
+        "id": "27Q155",
+        "display_name": "P.S. 155",
+        "count_user": "2"
+    },
+    {
+        "id": "27Q183",
+        "display_name": "P.S. 183 Dr. Richard R. Green",
+        "count_user": "1"
+    },
+    {
+        "id": "27Q197",
+        "display_name": "P.S. 197 The Ocean School",
+        "count_user": "4"
+    },
+    {
+        "id": "27Q202",
+        "display_name": "J.H.S. 202 Robert H. Goddard",
+        "count_user": "4"
+    }
+]
