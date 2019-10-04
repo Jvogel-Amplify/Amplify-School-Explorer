@@ -26,14 +26,14 @@ export default class DataService {
                 const frameworkScores = await axios.get(`http://localhost:9000/data/2018/${schoolId}/framework_scores.json`)
                 this.rawData[schoolId].frameworkScores = frameworkScores.data.data[0]
 
-                // const enrollment = await axios.get(`http://localhost:9000/data/2018/${schoolId}/enrollment.json`)
-                // this.rawData[schoolId].enrollment = enrollment.data.data
+                const enrollment = await axios.get(`http://localhost:9000/data/2018/${schoolId}/enrollment.json`)
+                this.rawData[schoolId].enrollment = enrollment.data.data
 
                 // const percentileRank = await axios.get(`http://localhost:9000/data/2018/${schoolId}/percentile_rank.json`)
                 // this.rawData[schoolId].percentileRank = percentileRank.data.data
 
-                // const studentPop = await axios.get(`http://localhost:9000/data/2018/${schoolId}/student_pop.json`)
-                // this.rawData[schoolId].studentPop = studentPop.data.data
+                const studentPop = await axios.get(`http://localhost:9000/data/2018/${schoolId}/student_pop.json`)
+                this.rawData[schoolId].studentPop = studentPop.data.data
             })
 
             const locationData = await axios.get(`http://localhost:9000/data/school-locations-17-18.json`)
@@ -87,6 +87,49 @@ export default class DataService {
                 const schoolObj = this.rawData[id] 
                 const {year, report_type, CT, ES, RI, SE, SF, TR, SA} = schoolObj.frameworkScores
                 return [schoolObj.dbn, year, report_type, CT, ES, RI, SE, SF, TR, SA]
+            })
+            return filteredData
+        } else {
+            throw new Error('Must fetch data first')
+        }
+    }
+
+    getHighNeedsData(id) {
+        if (this.rawData){
+            const studentPopData = this.rawData[id].studentPop
+            const filteredData = studentPopData.filter( (dataPoint) => {
+                return dataPoint.met_group === "Higher-Need Students"
+            }).map( dataPoint => {
+                const {metric_name_disp, value, value_district, value_city} = dataPoint
+                return [metric_name_disp, value, value_district, value_city]
+            })
+            return filteredData
+        } else {
+            throw new Error('Must fetch data first')
+        }
+    }
+
+    getRaceData(id) {
+        if (this.rawData){
+            const studentPopData = this.rawData[id].studentPop
+            const filteredData = studentPopData.filter( (dataPoint) => {
+                return dataPoint.met_group === "Race"
+            }).map( dataPoint => {
+                const {metric_name_disp, value, value_district, value_city} = dataPoint
+                return [metric_name_disp, value, value_district, value_city]
+            })
+            return filteredData
+        } else {
+            throw new Error('Must fetch data first')
+        }
+    }
+
+    getEnrollmentData(id) {
+        if (this.rawData){
+            const enrollmentData = this.rawData[id].enrollment
+            const filteredData = enrollmentData.map( dataPoint => {
+                const {grade, value} = dataPoint
+                return [grade, value]
             })
             return filteredData
         } else {
