@@ -12,8 +12,10 @@ $transitionSpeed: 200ms ease-in-out;
 }
 
 .modal-content {
-    width: 90vw;
-    height: 90vh;
+    width: 80vw;
+    height: 80vh;
+    padding: 10px 20px 20px 20px;
+    box-sizing: border-box;
 }
 
 .modal-header {
@@ -34,6 +36,11 @@ $transitionSpeed: 200ms ease-in-out;
     font-weight: bold;
     color: #ccc;
     text-align: center;
+}
+
+.charts-wrapper {
+    height: 50vh;
+    overflow: auto;
 }
 
 .ReactModal__Overlay {

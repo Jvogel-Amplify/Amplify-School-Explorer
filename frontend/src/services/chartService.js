@@ -161,7 +161,6 @@ export default class ChartService {
             element.className = `chart ${frameworkScoreCode}`
             elementWrapper.appendChild(element)
             const data = this.dataService.getFrameworkScoresData(frameworkScoreCode)
-            console.log(data)
             const gData = new google.visualization.DataTable()
             gData.addColumn('string', 'School ID')
             gData.addColumn('number', 'Framework Score') 

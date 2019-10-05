@@ -7,6 +7,7 @@ import HighNeedsChart from './HighNeedsChart'
 import EnrollmentChart from './EnrollmentChart'
 import RaceChart from './RaceChart'
 import School from './School'
+import Filters from './Filters'
 import * as lib from '../../../library/'
 import '../styles/Map.scss'
 
@@ -74,6 +75,7 @@ export default class Map extends React.Component {
         return (
             // Important! Always set the container height explicitly
             <div style={{ height: '100vh', width: '100%' }}>
+                <Filters schools={schoolsArr} />
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyCOfFzd3eXuf_2TaTiW_yM5AiVZMUWTYNQ' }}
                     defaultCenter={{

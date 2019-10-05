@@ -130,7 +130,6 @@ export default class DataService {
                 return this.rawData[id].frameworkScores
             }).map( (id) => {
                 const schoolObj = this.rawData[id] 
-                console.log(schoolObj)
                 const scoreValue = schoolObj.frameworkScores[scoreCode]
                 return [schoolObj.dbn, scoreValue]
                 

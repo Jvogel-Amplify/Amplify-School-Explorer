@@ -5,6 +5,8 @@ import App from './components/App'
 import DataService from './services/dataService'
 import ChartService from './services/chartService'
 
+import './styles/index.scss'
+
 const init = async () => {
     const dataService = new DataService()
     const chartService = new ChartService(dataService)
