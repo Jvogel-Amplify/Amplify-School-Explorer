@@ -25,16 +25,18 @@ const customStyles = {
 }
 
 export default class Map extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         this.state = {
             modalIsOpen: false,
-            selectedSchool: null
+            selectedSchool: null,
+            schools: props.schools,
+            filtered: props.schools,
+            allowed: []
         }
 
         this.openModal = this.openModal.bind(this)
-        this.afterOpenModal = this.afterOpenModal.bind(this)
         this.closeModal = this.closeModal.bind(this)
     }
 
@@ -45,19 +47,39 @@ export default class Map extends React.Component {
         })
     }
 
-    afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        // this.subtitle.style.color = '#f00'
-    }
-
     closeModal() {
         this.setState({ modalIsOpen: false })
+    }
+
+    filterMap(key) {
+        const allowed = this.state.allowed
+        allowed.push(key)
+
+        this.setState({
+            allowed
+        })
+
+        const filtered = Object.keys(this.props.schools)
+            .filter(key => this.state.allowed.includes(key))
+            .reduce((obj, key) => {
+                obj[key] = this.props.schools[key];
+                return obj;
+            }, {});
+
+        this.setState({
+            filtered
+        })
     }
 
     render() {
         const SchoolMarkerComponent = ({ key, school }) => {
             const markerColor = lib.countToRGB(school.userCount)
-            const markerStyle = { 'borderColor': markerColor }
+            const markerStyle = { backgroundColor: markerColor, borderColor: markerColor }
+
+            if (school.userCount) {
+                markerStyle['opacity'] = 1
+            }
+
             return (
                 <div
                     className="school-marker"
@@ -67,15 +89,19 @@ export default class Map extends React.Component {
             )
         }
 
-        const schoolsObj = this.props.schools
-        const schoolsArr = Object.keys(schoolsObj)
+        const schoolsObj = this.state.filtered
+        const filteredArr = Object.keys(schoolsObj)
             .map(key => schoolsObj[key])
+            .filter(item => item.lat && item.lng)
+
+        const schoolsArr = Object.keys(this.state.schools)
+            .map(key => this.state.schools[key])
             .filter(item => item.lat && item.lng)
 
         return (
             // Important! Always set the container height explicitly
             <div style={{ height: '100vh', width: '100%' }}>
-                <Filters schools={schoolsArr} />
+                <Filters schools={schoolsArr} filterMap={this.filterMap.bind(this)} />
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyCOfFzd3eXuf_2TaTiW_yM5AiVZMUWTYNQ' }}
                     defaultCenter={{
@@ -84,7 +110,7 @@ export default class Map extends React.Component {
                     }}
                     defaultZoom={10}
                 >
-                    {schoolsArr.map(school => {
+                    {filteredArr.map(school => {
                         return <SchoolMarkerComponent key={school.dbn} lat={school.lat} lng={school.lng} school={school}/>
                     })}
 
@@ -106,32 +132,32 @@ export default class Map extends React.Component {
                         selectedSchool={this.state.selectedSchool}
                         schools={schoolsObj}
                     ></School>
-                    <div className='charts-wrapper'> 
+                    <div className='charts-wrapper'>
                         <div className='row'>
-                            <EnrollmentChart 
-                                selectedSchool={this.state.selectedSchool} 
+                            <EnrollmentChart
+                                selectedSchool={this.state.selectedSchool}
                                 chartService={this.props.chartService}
                             ></EnrollmentChart>
-                            <RaceChart 
-                                selectedSchool={this.state.selectedSchool} 
+                            <RaceChart
+                                selectedSchool={this.state.selectedSchool}
                                 chartService={this.props.chartService}
                             ></RaceChart>
                         </div>
                         <div className='row'>
-                            <PerformanceImpactChart 
-                                selectedSchool={this.state.selectedSchool} 
+                            <PerformanceImpactChart
+                                selectedSchool={this.state.selectedSchool}
                                 chartService={this.props.chartService}
                             ></PerformanceImpactChart>
-                            <HighNeedsChart 
-                                selectedSchool={this.state.selectedSchool} 
+                            <HighNeedsChart
+                                selectedSchool={this.state.selectedSchool}
                                 chartService={this.props.chartService}
                             ></HighNeedsChart>
                         </div>
-                        <FrameworkScoresChart 
-                            selectedSchool={this.state.selectedSchool} 
+                        <FrameworkScoresChart
+                            selectedSchool={this.state.selectedSchool}
                             chartService={this.props.chartService}
                         ></FrameworkScoresChart>
-                        
+
                     </div>
                 </div>
         </Modal>

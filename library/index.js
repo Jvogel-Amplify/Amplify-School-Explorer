@@ -13,31 +13,16 @@ export const countToRGB = (count) => {
 
     if (!count) return "rgb(169,169,169)"
 
-    const maxCount = 1
-    const minCount = 450
+    const minCount = 1
+    const maxCount = 450
 
-    let percent = ((count - minCount) / (maxCount - minCount)) * 100
+    let percent = ((count - maxCount) / (minCount - maxCount)) * 100
 
     if (percent === 100) {
         percent = 99
     }
 
-    var r, g, b;
-
-    if (percent < 50) {
-        // green to yellow
-        r = Math.floor(255 * (percent / 50));
-        g = 255;
-
-    } else {
-        // yellow to red
-        r = 255;
-        g = Math.floor(255 * ((50 - percent % 50) / 50));
-    }
-
-    b = 0;
-
-    return "rgb(" + r + "," + g + "," + b + ")";
+    return `rgb(0%,${percent}%,100%)`;
 }
 
 export const addScript = ( src ) => {

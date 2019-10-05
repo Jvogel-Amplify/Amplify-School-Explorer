@@ -8,7 +8,7 @@ export default class Schools extends React.Component {
 
         return (
             <ul>
-                {schools.map(school => (<li key={school.dbn}>{school.school}</li>))}
+                {schools.map(school => (<li onClick={() => this.props.filterMap(school.dbn)} key={school.dbn}>{school.school}</li>))}
             </ul>
         )
     }

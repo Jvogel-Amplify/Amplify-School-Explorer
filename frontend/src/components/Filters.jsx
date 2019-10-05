@@ -14,11 +14,13 @@ export default class Example extends React.Component {
         this.filterSchools = this.filterSchools.bind(this)
     }
 
-    filterSchools(event) {
-        const filter = event.target.value.toLowerCase()
+    filterMap(key) {
+        this.props.filterMap(key)
+    }
 
+    filterSchools(event) {
         this.setState({
-            filter
+            filter: event.target.value.toLowerCase()
         })
     }
 
@@ -32,7 +34,7 @@ export default class Example extends React.Component {
                         onChange={this.filterSchools}
                     />
                     <div className="schools-list">
-                        <Schools schools={this.props.schools} filter={this.state.filter} />
+                        <Schools schools={this.props.schools} filter={this.state.filter} filterMap={this.filterMap.bind(this)} />
                     </div>
                 </div>
             </Menu>
