@@ -27,7 +27,6 @@ export default class School extends React.Component {
     render() {
         const slectedSchool = this.props.selectedSchool
         const school = this.props.schools[slectedSchool]
-        console.log(school)
 
         return (
             <div className="school-details">
