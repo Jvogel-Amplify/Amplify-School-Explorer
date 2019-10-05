@@ -1,7 +1,7 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import path from 'path'
-import {pullDataController} from './controllers'
+import {pullDataController, mergeDataController} from './controllers'
 
 const app = express()
 const port = 9000
@@ -11,6 +11,8 @@ app.use(bodyParser.json())
 
 // configure routes
 app.get('/pull-data', pullDataController)
+
+app.get('/merge-data', mergeDataController)
 
  // serve static data files
 
