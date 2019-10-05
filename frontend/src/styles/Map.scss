@@ -1,14 +1,24 @@
-$transitionSpeed: 200ms ease-in-out;
+$transitionSpeed: 100ms ease-in-out;
 
 .school-marker {
-    text-align: center;
-    line-height: 15px;
-    width: 15px;
-    height: 15px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 6px;
+    height: 6px;
+    border: 2px solid transparent;
     border-radius: 50%;
-    border: 3px solid gray;
-    background-color: white;
+    opacity: .5;
     transition: all $transitionSpeed;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+        width: 10px;
+        height: 10px;
+        margin-left:-2px;
+        margin-top:-2px;
+    }
 }
 
 .modal-content {
