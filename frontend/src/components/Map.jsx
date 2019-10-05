@@ -99,7 +99,7 @@ export default class Map extends React.Component {
 
                 <div className="modal-content">
                     <div className="modal-header">
-                        <span className="modal-close" onClick={this.closeModal}>X</span>
+                        <span className="modal-close" onClick={this.closeModal}></span>
                     </div>
 
                     <School

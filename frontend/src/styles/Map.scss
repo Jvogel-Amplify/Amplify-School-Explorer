@@ -27,16 +27,31 @@ $transitionSpeed: 200ms ease-in-out;
 .modal-close {
     position: absolute;
     right: 0;
-    border: 1px solid #ccc;
-    padding: 5px;
-    border-radius: 4px;
-    width: 12px;
+    top: -6px;
+    width: 25px;
+    height: 32px;
+    opacity: 0.3;
     cursor: pointer;
-    font-size: 12px;
-    font-weight: bold;
-    color: #ccc;
-    text-align: center;
 }
+
+  .modal-close:hover {
+    opacity: 1;
+  }
+
+  .modal-close:before, .modal-close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #666;
+  }
+  .modal-close:before {
+    transform: rotate(45deg);
+  }
+  .modal-close:after {
+    transform: rotate(-45deg);
+  }
 
 .charts-wrapper {
     height: 50vh;
