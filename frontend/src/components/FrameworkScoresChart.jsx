@@ -13,6 +13,6 @@ export default class FrameworkScoresChart extends React.Component {
 
     render() {
         
-        return (<div id='frameworkScores'></div>)
+        return (<div id='frameworkScores' className="row"></div>)
     }
 }

@@ -58,6 +58,14 @@ $transitionSpeed: 200ms ease-in-out;
 .charts-wrapper {
     height: 50vh;
     overflow: auto;
+
+    .row {
+        display: flex;
+
+        &#frameworkScores {
+            flex-wrap: wrap;
+        }
+    }
 }
 
 .ReactModal__Overlay {

@@ -158,7 +158,7 @@ export default class ChartService {
 
         frameworkScoreCodes.forEach( (frameworkScoreCode) => {
             const element = document.createElement('div')
-            element.className = `chart ${frameworkScoreCode}`
+            element.className = `framework chart ${frameworkScoreCode}`
             elementWrapper.appendChild(element)
             const data = this.dataService.getFrameworkScoresData(frameworkScoreCode)
             const gData = new google.visualization.DataTable()
@@ -167,7 +167,8 @@ export default class ChartService {
             //gData.addColumn({'type': 'string', 'role': 'style'})
 
             const options = {
-                title: `Framework: ${frameworkScoreCodeMap[frameworkScoreCode]} Score`
+                title: `${frameworkScoreCodeMap[frameworkScoreCode]} Score Distribution`,
+                legend: { position: 'none' }
             }
             data.forEach((row) => {
                 gData.addRow(row)
