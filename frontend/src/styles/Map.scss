@@ -32,26 +32,28 @@ $transitionSpeed: 200ms ease-in-out;
     height: 32px;
     opacity: 0.3;
     cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:before, &:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 20px;
+        width: 2px;
+        background-color: #666;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
 }
-
-  .modal-close:hover {
-    opacity: 1;
-  }
-
-  .modal-close:before, .modal-close:after {
-    position: absolute;
-    left: 15px;
-    content: ' ';
-    height: 20px;
-    width: 2px;
-    background-color: #666;
-  }
-  .modal-close:before {
-    transform: rotate(45deg);
-  }
-  .modal-close:after {
-    transform: rotate(-45deg);
-  }
 
 .charts-wrapper {
     height: 50vh;
@@ -63,10 +65,10 @@ $transitionSpeed: 200ms ease-in-out;
     transition: opacity $transitionSpeed;
 }
 
-.ReactModal__Overlay--after-open{
+.ReactModal__Overlay--after-open {
     opacity: 1;
 }
 
-.ReactModal__Overlay--before-close{
+.ReactModal__Overlay--before-close {
     opacity: 0;
 }
