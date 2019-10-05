@@ -15,59 +15,11 @@ export default class ChartService {
                 callback()
             }
         )
-
     }
 
     setMapService(mapService){
         this.mapService = mapService
     }
-
-    // drawHistogram(neighborhood, chartWrapper) {
-    //     const data = this.dataService.getRawDataWithWhereClause('Neighborhood', neighborhood)
-    //     const filteredData = data.map((filteredDataPoint) => {
-    //         return [filteredDataPoint[0], parseFloat(filteredDataPoint[1])]
-    //     })
-    //     if (filteredData.length > 10) {
-    //         const chartElement = this.getChartElement(neighborhood, chartWrapper)
-    //         const gData = new google.visualization.DataTable()
-    //         gData.addColumn('string', 'ID');
-    //         gData.addColumn('number');
-
-    //         filteredData.forEach((row) => {
-    //             gData.addRow([
-    //                 row[0],
-    //                 row[1]
-    //             ]);
-    //         });
-
-    //         // Set chart options
-    //         const options = {
-    //             legend: { position: 'none' },
-    //             histogram: { bucketSize: 50, hideBucketItems: true },
-    //         }
-
-    //         // Instantiate and draw the chart.
-    //         const chart = new google.visualization.Histogram(chartElement)
-
-    //         const selectHandler = () => {
-    //             const selectedItem = chart.getSelection()[0]
-    //             if (selectedItem) {
-    //                 const value = gData.getValue(selectedItem.row, 0)
-    //                 const dataPoint = this.dataService.getRow(value)
-    //                 if(this.mapService){
-    //                     //this.mapService.highlightDataPoint(dataPoint)
-    //                 }
-    //             }
-    //         }
-
-    //         // Listen for the 'select' event, and call my function selectHandler() when
-    //         // the user selects something on the chart.
-    //         google.visualization.events.addListener(chart, 'select', selectHandler)
-
-    //         chart.draw(gData, options)
-    //     }
-
-    // }
 
     drawHighNeeds(elementId, selectedSchoolId) {
         const element = document.getElementById(elementId)
@@ -143,7 +95,7 @@ export default class ChartService {
     drawAllFrameworkScores(elementWrapperId, selectedSchoolId) {
         const elementWrapper = document.getElementById(elementWrapperId)
 
-        const frameworkScoreCodes = ["CT", "ES", "RI", "SE", "SF", "TR", "SA"]
+        const frameworkScoreCodes = ["CT"]
 
         const frameworkScoreCodeMap = {
             "CT": "Collaborative Teachers",
@@ -157,26 +109,75 @@ export default class ChartService {
 
 
         frameworkScoreCodes.forEach( (frameworkScoreCode) => {
-            const element = document.createElement('div')
-            element.className = `framework chart ${frameworkScoreCode}`
-            elementWrapper.appendChild(element)
+            console.log(document.getElementById('frameworkScores'))
+            const element = document.getElementById(frameworkScoreCode)
+            console.log('hello???', element)
             const data = this.dataService.getFrameworkScoresData(frameworkScoreCode)
             const gData = new google.visualization.DataTable()
             gData.addColumn('string', 'School ID')
             gData.addColumn('number', 'Framework Score') 
+            // gData.addColumn({type: 'string', role: 'annotation'});
             //gData.addColumn({'type': 'string', 'role': 'style'})
 
             const options = {
                 title: `${frameworkScoreCodeMap[frameworkScoreCode]} Score Distribution`,
-                legend: { position: 'none' }
+                legend: { position: 'none' },
+                // annotations: {
+                //     style: 'line'
+                // }
             }
             data.forEach((row) => {
-                gData.addRow(row)
+                if(row[0] === selectedSchoolId){
+                    gData.addRow([row[0], row[1]])
+                } else {
+                    gData.addRow([row[0], row[1]])
+                }
             });
 
             const chart = new google.visualization.Histogram(element);
             chart.draw(gData, options)
         } )
+    }
+
+    drawFrameworkScore(scoreCode, selectedSchoolId) {
+        const frameworkScoreCodeMap = {
+            "CT": "Collaborative Teachers",
+            "ES": "Effective School Leadership",
+            "RI": "Rigorous Instruction",
+            "SE": "Supportive Environment",
+            "SF": "Strong Family-Community Ties",
+            "TR": "Trust",
+            "SA": "Student Achievement",
+        }
+
+        const element = document.getElementById(scoreCode)
+        const data = this.dataService.getFrameworkScoresData(scoreCode)
+        const gData = new google.visualization.DataTable()
+        gData.addColumn('string', 'School ID')
+        gData.addColumn('number', 'Framework Score') 
+        // gData.addColumn({type: 'string', role: 'annotation'});
+        //gData.addColumn({'type': 'string', 'role': 'style'})
+
+        const options = {
+            legend: { position: 'none' },
+            yAxis: {
+                maxValue: 175
+            }
+            // annotations: {
+            //     style: 'line'
+            // }
+        }
+        data.forEach((row) => {
+            if(row[0] === selectedSchoolId){
+                gData.addRow([row[0], row[1]])
+            } else {
+                gData.addRow([row[0], row[1]])
+            }
+        });
+
+        const chart = new google.visualization.Histogram(element);
+        chart.draw(gData, options)
+    
     }
 
     drawPerformanceImpact(elementId, selectedSchoolId) {
