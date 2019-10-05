@@ -19,6 +19,7 @@
     "handlebars": "^4.2.0",
     "path": "^0.12.7",
     "react": "^16.10.1",
+    "react-burger-menu": "^2.6.11",
     "react-dom": "^16.10.1",
     "react-modal": "^3.10.1"
   },
