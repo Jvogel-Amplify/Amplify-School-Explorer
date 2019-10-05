@@ -67,5 +67,10 @@ Project Team Members:
 
 ## TODOs
 - https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj
+
+
+- Framework scores
+- Enrollment data 
+
     
     

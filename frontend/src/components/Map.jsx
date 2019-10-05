@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import Modal from 'react-modal'
-import ImpactPerformanceChart from './ImpactPerformanceChart'
+import PerformanceImpactChart from './PerformanceImpactChart'
+import FrameworkScoresChart from './FrameworkScoresChart'
+import HighNeedsChart from './HighNeedsChart'
+import EnrollmentChart from './EnrollmentChart'
+import RaceChart from './RaceChart'
 import School from './School'
 import Filters from './Filters'
 import * as lib from '../../../library/'
@@ -102,11 +106,26 @@ export default class Map extends React.Component {
                         selectedSchool={this.state.selectedSchool}
                         schools={schoolsObj}
                     ></School>
-
-                    <ImpactPerformanceChart
-                        selectedSchool={this.state.selectedSchool}
+                    <EnrollmentChart 
+                        selectedSchool={this.state.selectedSchool} 
                         chartService={this.props.chartService}
-                    ></ImpactPerformanceChart>
+                    ></EnrollmentChart>
+                    <PerformanceImpactChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></PerformanceImpactChart>
+                    <HighNeedsChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></HighNeedsChart>
+                    <RaceChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></RaceChart>
+                    {/* <FrameworkScoresChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></FrameworkScoresChart> */}
                 </div>
         </Modal>
             </div>
