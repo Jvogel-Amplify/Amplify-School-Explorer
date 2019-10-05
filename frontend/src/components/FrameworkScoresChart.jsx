@@ -37,26 +37,26 @@ export default class FrameworkScoresChart extends React.Component {
                     <div className="row">
                         <div className='col'>
                             <TabPanel>
-                                <FrameworkScoreChart code="CT" chartService={this.props.chartService}></FrameworkScoreChart>
+                                <FrameworkScoreChart selectedSchool={this.props.selectedSchool} code="CT" chartService={this.props.chartService}></FrameworkScoreChart>
                             </TabPanel>
                             <TabPanel>
-                                <FrameworkScoreChart code="ES" chartService={this.props.chartService}></FrameworkScoreChart>
+                                <FrameworkScoreChart selectedSchool={this.props.selectedSchool} code="ES" chartService={this.props.chartService}></FrameworkScoreChart>
                             </TabPanel>
                             <TabPanel>
-                                <FrameworkScoreChart code="RI" chartService={this.props.chartService}></FrameworkScoreChart>
+                                <FrameworkScoreChart selectedSchool={this.props.selectedSchool} code="RI" chartService={this.props.chartService}></FrameworkScoreChart>
                             </TabPanel>
                             <TabPanel>
-                                <FrameworkScoreChart code="SE" chartService={this.props.chartService}></FrameworkScoreChart>
+                                <FrameworkScoreChart selectedSchool={this.props.selectedSchool} code="SE" chartService={this.props.chartService}></FrameworkScoreChart>
                             </TabPanel>
                             <TabPanel>
-                                <FrameworkScoreChart code="SF" chartService={this.props.chartService}></FrameworkScoreChart>
+                                <FrameworkScoreChart selectedSchool={this.props.selectedSchool} code="SF" chartService={this.props.chartService}></FrameworkScoreChart>
                             </TabPanel>
                             <TabPanel>
-                                <FrameworkScoreChart code="TR" chartService={this.props.chartService}></FrameworkScoreChart>
+                                <FrameworkScoreChart selectedSchool={this.props.selectedSchool} code="TR" chartService={this.props.chartService}></FrameworkScoreChart>
                             </TabPanel>
                         </div>
                         <div className='col'>
-                            <FrameworkScoreChart code="SA" chartService={this.props.chartService}></FrameworkScoreChart>
+                            <FrameworkScoreChart selectedSchool={this.props.selectedSchool} code="SA" chartService={this.props.chartService}></FrameworkScoreChart>
                         </div>
                     </div>
                 </Tabs>

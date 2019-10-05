@@ -5,13 +5,19 @@ export default class DataService {
 
     constructor() {
       this.rawData = {}
+      this.frameworkData = {}
       this.headersMap = null
     }
 
     async fetchData() {
         try {
+            const response2 = await axios.get('http://localhost:9000/data/frameworkData.json')
             const response = await axios.get('http://localhost:9000/data/mergedData.json')
             this.rawData = response.data
+            this.frameworkData = response2.data
+            console.log(this.rawData)
+            console.log(this.frameworkData)
+
             Promise.resolve(true)
         } catch (error) {
             console.error(error)
@@ -93,6 +99,16 @@ export default class DataService {
                 
             })
             return filteredData
+        } else {
+            throw new Error('Must fetch data first')
+        }
+    }
+
+    getRawFrameworkData(scoreCode) {
+        if (this.frameworkData){
+            return Object.keys(this.frameworkData[scoreCode]).map(key => {
+                return [key, this.frameworkData[scoreCode][key]]
+            })
         } else {
             throw new Error('Must fetch data first')
         }

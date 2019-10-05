@@ -8,7 +8,7 @@ export default class FrameworkScoreChart extends React.Component {
     }
 
     componentDidMount() {
-        this.props.chartService.drawFrameworkScore(this.props.code, this.props.selectedSchool)
+        this.props.chartService.drawFrameworkScore2(this.props.code, this.props.selectedSchool)
     }
 
     render() {

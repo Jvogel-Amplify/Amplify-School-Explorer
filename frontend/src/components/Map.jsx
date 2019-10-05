@@ -98,6 +98,8 @@ export default class Map extends React.Component {
             .map(key => this.state.schools[key])
             .filter(item => item.lat && item.lng)
 
+        console.log("HEY", this.state.filtered)
+
         return (
             // Important! Always set the container height explicitly
             <div style={{ height: '100vh', width: '100%' }}>

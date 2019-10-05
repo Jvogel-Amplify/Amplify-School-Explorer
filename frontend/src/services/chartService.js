@@ -38,7 +38,7 @@ export default class ChartService {
 
         const options = {
             title: `Higher-Need Students`,
-            hAxis: {format:'#%'},
+            hAxis: {title: 'Percentage', format:'#%'},
         };
 
         const chart = new google.visualization.BarChart(element);
@@ -78,7 +78,10 @@ export default class ChartService {
         //gData.addColumn({'type': 'string', 'role': 'style'})
 
         const options = {
-            title: 'Student Enrollment'
+            title: 'Student Enrollment',
+            legend: { position: 'none' },
+            hAxis: { title: 'Number of Students'},
+            vAxis: { title: 'Grade Level'},
         }
         data.forEach((row) => {
             if(row[0] === "Total"){
@@ -139,7 +142,56 @@ export default class ChartService {
         } )
     }
 
-    drawFrameworkScore(scoreCode, selectedSchoolId) {
+    // drawFrameworkScore(scoreCode, selectedSchoolId) {
+    //     const frameworkScoreCodeMap = {
+    //         "CT": "Collaborative Teachers",
+    //         "ES": "Effective School Leadership",
+    //         "RI": "Rigorous Instruction",
+    //         "SE": "Supportive Environment",
+    //         "SF": "Strong Family-Community Ties",
+    //         "TR": "Trust",
+    //         "SA": "Student Achievement",
+    //     }
+
+    //     const element = document.getElementById(scoreCode)
+    //     const data = this.dataService.getFrameworkScoresData(scoreCode)
+    //     const gData = new google.visualization.DataTable()
+    //     gData.addColumn('string', 'School ID')
+    //     gData.addColumn('number', 'Framework Score') 
+    //     // gData.addColumn({type: 'string', role: 'annotation'});
+    //     //gData.addColumn({'type': 'string', 'role': 'style'})
+
+    //     const options = {
+    //         legend: { position: 'none' },
+    //         yAxis: {
+    //             maxValue: 175
+    //         }
+    //         // annotations: {
+    //         //     style: 'line'
+    //         // }
+    //     }
+
+    //     const categoryMap = {
+    //         'N': 'Not Meeting',
+    //         'A': 'Approaching',
+    //         'M': 'Meeting',
+    //         'E': 'Exceeding'
+    //     }
+
+    //     data.forEach((row) => {
+    //         if(row[0] === selectedSchoolId){
+    //             gData.addRow([categoryMap[row[0]], row[1]])
+    //         } else {
+    //             gData.addRow([categoryMap[row[0]], row[1]])
+    //         }
+    //     });
+
+    //     const chart = new google.visualization.Histogram(element);
+    //     chart.draw(gData, options)
+    
+    // }
+
+    drawFrameworkScore2(scoreCode, selectedSchoolId) {
         const frameworkScoreCodeMap = {
             "CT": "Collaborative Teachers",
             "ES": "Effective School Leadership",
@@ -150,32 +202,72 @@ export default class ChartService {
             "SA": "Student Achievement",
         }
 
+        const rawData = this.dataService.getRawData()
+        console.log(rawData)
+        console.log(selectedSchoolId)
+        const schoolObj = rawData[selectedSchoolId]
+        let value = null
+        if(schoolObj.frameworkScores){
+            value = schoolObj.frameworkScores[scoreCode]
+        }
+
         const element = document.getElementById(scoreCode)
-        const data = this.dataService.getFrameworkScoresData(scoreCode)
+        const data = this.dataService.getRawFrameworkData(scoreCode)
         const gData = new google.visualization.DataTable()
-        gData.addColumn('string', 'School ID')
-        gData.addColumn('number', 'Framework Score') 
-        // gData.addColumn({type: 'string', role: 'annotation'});
-        //gData.addColumn({'type': 'string', 'role': 'style'})
+        gData.addColumn('string', 'Category')
+        gData.addColumn('number', 'Number of Schools') 
+        gData.addColumn({'type': 'string', 'role': 'style'})
 
         const options = {
             legend: { position: 'none' },
-            yAxis: {
-                maxValue: 175
-            }
+            // yAxis: {
+            //     maxValue: 175
+            // }
             // annotations: {
             //     style: 'line'
             // }
         }
+
+        if (scoreCode === 'SA'){
+            options.title = 'Student Achievement'
+        }
+
+        const categoryMap = {
+            'N': 'Not Meeting',
+            'A': 'Approaching',
+            'M': 'Meeting',
+            'E': 'Exceeding'
+        }
+
+        const frameworkScoreKey = {
+            'N': {
+                startScore: 1,
+                endScore: 1.99,
+            },
+            'A': {
+                startScore: 2,
+                endScore: 2.99,
+            },
+            'M':  {
+                startScore: 3,
+                endScore: 3.99,
+            },
+            'E': {
+                startScore: 4,
+                endScore: 4.99,
+            }
+        }
+
+
         data.forEach((row) => {
-            if(row[0] === selectedSchoolId){
-                gData.addRow([row[0], row[1]])
+            if(value >= frameworkScoreKey[row[0]].startScore &&  value <= frameworkScoreKey[row[0]].endScore){
+                gData.addRow([categoryMap[row[0]], row[1], 'color: #FF8C00'])
             } else {
-                gData.addRow([row[0], row[1]])
+                gData.addRow([categoryMap[row[0]], row[1], 'color: #BFBFBF'])
             }
         });
 
-        const chart = new google.visualization.Histogram(element);
+        const chart = new google.visualization.BarChart(element);
         chart.draw(gData, options)
     
     }
