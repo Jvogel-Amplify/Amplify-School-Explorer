@@ -106,29 +106,26 @@ export default class Map extends React.Component {
                         selectedSchool={this.state.selectedSchool}
                         schools={schoolsObj}
                     ></School>
-
-                    <div className="charts-wrapper">
-                        <EnrollmentChart
-                            selectedSchool={this.state.selectedSchool}
-                            chartService={this.props.chartService}
-                        ></EnrollmentChart>
-                        <PerformanceImpactChart
-                            selectedSchool={this.state.selectedSchool}
-                            chartService={this.props.chartService}
-                        ></PerformanceImpactChart>
-                        <HighNeedsChart
-                            selectedSchool={this.state.selectedSchool}
-                            chartService={this.props.chartService}
-                        ></HighNeedsChart>
-                        <RaceChart
-                            selectedSchool={this.state.selectedSchool}
-                            chartService={this.props.chartService}
-                        ></RaceChart>
-                        {/* <FrameworkScoresChart
-                            selectedSchool={this.state.selectedSchool}
-                            chartService={this.props.chartService}
-                        ></FrameworkScoresChart> */}
-                    </div>
+                    <EnrollmentChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></EnrollmentChart>
+                    <PerformanceImpactChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></PerformanceImpactChart>
+                    <HighNeedsChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></HighNeedsChart>
+                    <RaceChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></RaceChart>
+                    <FrameworkScoresChart 
+                        selectedSchool={this.state.selectedSchool} 
+                        chartService={this.props.chartService}
+                    ></FrameworkScoresChart>
                 </div>
         </Modal>
             </div>
