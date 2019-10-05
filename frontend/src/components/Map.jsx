@@ -120,10 +120,10 @@ export default class Map extends React.Component {
                         selectedSchool={this.state.selectedSchool} 
                         chartService={this.props.chartService}
                     ></RaceChart>
-                    {/* <FrameworkScoresChart 
+                    <FrameworkScoresChart 
                         selectedSchool={this.state.selectedSchool} 
                         chartService={this.props.chartService}
-                    ></FrameworkScoresChart> */}
+                    ></FrameworkScoresChart>
                 </div>
         </Modal>
             </div>

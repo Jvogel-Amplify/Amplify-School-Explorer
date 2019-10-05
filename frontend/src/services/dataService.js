@@ -81,19 +81,6 @@ export default class DataService {
         }
     }
 
-    getFrameworkScoresData() {
-        if (this.rawData){
-            const filteredData = Object.keys(this.rawData).map( (id) => {
-                const schoolObj = this.rawData[id] 
-                const {year, report_type, CT, ES, RI, SE, SF, TR, SA} = schoolObj.frameworkScores
-                return [schoolObj.dbn, year, report_type, CT, ES, RI, SE, SF, TR, SA]
-            })
-            return filteredData
-        } else {
-            throw new Error('Must fetch data first')
-        }
-    }
-
     getHighNeedsData(id) {
         if (this.rawData){
             const studentPopData = this.rawData[id].studentPop
@@ -136,6 +123,36 @@ export default class DataService {
             throw new Error('Must fetch data first')
         }
     }
+
+    getFrameworkScoresData(scoreCode) {
+        if (this.rawData){
+            const filteredData = Object.keys(this.rawData).filter( (id) => {
+                return this.rawData[id].frameworkScores
+            }).map( (id) => {
+                const schoolObj = this.rawData[id] 
+                console.log(schoolObj)
+                const scoreValue = schoolObj.frameworkScores[scoreCode]
+                return [schoolObj.dbn, scoreValue]
+                
+            })
+            return filteredData
+        } else {
+            throw new Error('Must fetch data first')
+        }
+    }
+
+    // getFrameworkScoresData(id) {
+    //     if (this.rawData){
+    //         const frameworkScoresData = this.rawData[id].enrollment
+    //         const filteredData = frameworkScoresData.map( dataPoint => {
+    //             const {dbn, CT, ES, RI, SE, SF, TR, SA} = dataPoint
+    //             return [grade, value]
+    //         })
+    //         return filteredData
+    //     } else {
+    //         throw new Error('Must fetch data first')
+    //     }
+    // }
 
     // getRawDataWithWhereClause(columnName, columnValue) {
     //     const columnIndex = this.headersMap[toCamelCase(columnName)]

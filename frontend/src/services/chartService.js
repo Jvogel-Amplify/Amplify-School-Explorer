@@ -110,7 +110,7 @@ export default class ChartService {
 
         const options = {
             title: `Racial Demographics`,
-            hAxis: { title: 'Percentage', minValue: 0, maxValue: 1 },
+            hAxis: { title: 'Percentage', format:'#%'},
         };
 
         const chart = new google.visualization.BarChart(element);
@@ -130,7 +130,7 @@ export default class ChartService {
         }
         data.forEach((row) => {
             if(row[0] === "Total"){
-                options.title = `Student Enrollment - ${row[1]} Students`
+                options.title = `Student Enrollment (${row[1]} Total Students)`
             } else {
                 gData.addRow(row)
             }
@@ -138,6 +138,45 @@ export default class ChartService {
 
         const chart = new google.visualization.BarChart(element);
         chart.draw(gData, options)
+    }
+
+    drawAllFrameworkScores(elementWrapperId, selectedSchoolId) {
+        const elementWrapper = document.getElementById(elementWrapperId)
+
+        const frameworkScoreCodes = ["CT", "ES", "RI", "SE", "SF", "TR", "SA"]
+
+        const frameworkScoreCodeMap = {
+            "CT": "Collaborative Teachers",
+            "ES": "Effective School Leadership",
+            "RI": "Rigorous Instruction",
+            "SE": "Supportive Environment",
+            "SF": "Strong Family-Community Ties",
+            "TR": "Trust",
+            "SA": "Student Achievement",
+        }
+
+
+        frameworkScoreCodes.forEach( (frameworkScoreCode) => {
+            const element = document.createElement('div')
+            element.className = `chart ${frameworkScoreCode}`
+            elementWrapper.appendChild(element)
+            const data = this.dataService.getFrameworkScoresData(frameworkScoreCode)
+            console.log(data)
+            const gData = new google.visualization.DataTable()
+            gData.addColumn('string', 'School ID')
+            gData.addColumn('number', 'Framework Score') 
+            //gData.addColumn({'type': 'string', 'role': 'style'})
+
+            const options = {
+                title: `Framework: ${frameworkScoreCodeMap[frameworkScoreCode]} Score`
+            }
+            data.forEach((row) => {
+                gData.addRow(row)
+            });
+
+            const chart = new google.visualization.Histogram(element);
+            chart.draw(gData, options)
+        } )
     }
 
     drawPerformanceImpact(elementId, selectedSchoolId) {

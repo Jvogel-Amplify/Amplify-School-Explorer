@@ -8,11 +8,11 @@ export default class FrameworkScoresChart extends React.Component {
     }
 
     componentDidMount() {
-        this.props.chartService.drawFrameworkScores('frameworkScores', this.props.selectedSchool)
+        this.props.chartService.drawAllFrameworkScores('frameworkScores', this.props.selectedSchool)
     }
 
     render() {
         
-        return (<div id='frameworkScores' className="chart">{this.props.selectedSchool}</div>)
+        return (<div id='frameworkScores'></div>)
     }
 }
