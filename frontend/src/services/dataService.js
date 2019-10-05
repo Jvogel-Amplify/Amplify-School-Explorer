@@ -10,50 +10,8 @@ export default class DataService {
 
     async fetchData() {
         try {
-            const schools = await axios.get('http://localhost:9000/data/schoolData.json')
-            schools.data.forEach( (schoolObj) => {
-                this.rawData[schoolObj.dbn] = schoolObj
-            })
-
-            const impactPerformance = await axios.get('http://localhost:9000/data/impactPerformance.json')
-            impactPerformance.data.data.forEach( (impactPerformanceObj) => {
-                const id = impactPerformanceObj.dbn
-                this.rawData[id].impact = impactPerformanceObj.impact
-                this.rawData[id].performance = impactPerformanceObj.performance
-            })
-
-            await Object.keys(this.rawData).forEach(async schoolId => {
-                const frameworkScores = await axios.get(`http://localhost:9000/data/2018/${schoolId}/framework_scores.json`)
-                this.rawData[schoolId].frameworkScores = frameworkScores.data.data[0]
-
-                const enrollment = await axios.get(`http://localhost:9000/data/2018/${schoolId}/enrollment.json`)
-                this.rawData[schoolId].enrollment = enrollment.data.data
-
-                // const percentileRank = await axios.get(`http://localhost:9000/data/2018/${schoolId}/percentile_rank.json`)
-                // this.rawData[schoolId].percentileRank = percentileRank.data.data
-
-                const studentPop = await axios.get(`http://localhost:9000/data/2018/${schoolId}/student_pop.json`)
-                this.rawData[schoolId].studentPop = studentPop.data.data
-            })
-
-            const locationData = await axios.get(`http://localhost:9000/data/school-locations-17-18.json`)
-            locationData.data.forEach(locationObj => {
-                const schoolId = locationObj["ATS SYSTEM CODE"]
-                if(this.rawData[schoolId]) {
-                    const coordinates = locationObj["Location 1"].split('\n').pop().replace(/[{()}]/g, '').split(',')
-                    this.rawData[schoolId].lat = coordinates[0]
-                    this.rawData[schoolId].lng = coordinates[1]
-                }
-            })
-
-            const amplifyUserCount = await axios.get(`http://localhost:9000/data/amplify-school-user-count.json`)
-            amplifyUserCount.data.forEach(schoolObj => {
-                const schoolId = schoolObj.id
-                if(this.rawData[schoolId]) {
-                    this.rawData[schoolId].userCount = schoolObj.count_user
-                }
-            })
-
+            const response = await axios.get('http://localhost:9000/data/mergedData.json')
+            this.rawData = response.data
             Promise.resolve(true)
         } catch (error) {
             console.error(error)
