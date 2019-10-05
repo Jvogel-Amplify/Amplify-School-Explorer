@@ -36,6 +36,11 @@ $transitionSpeed: 200ms ease-in-out;
     text-align: center;
 }
 
+.charts-wrapper {
+    height: 90vh;
+    overflow: hidden;
+}
+
 .ReactModal__Overlay {
     opacity: 0;
     transition: opacity $transitionSpeed;
