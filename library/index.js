@@ -22,7 +22,7 @@ export const countToRGB = (count) => {
         percent = 99
     }
 
-    return `rgb(0%,${percent}%,100%)`;
+    return `rgb(100%,${100-percent}%,${percent}%)`;
 }
 
 export const addScript = ( src ) => {

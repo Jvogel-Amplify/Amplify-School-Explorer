@@ -15,8 +15,6 @@ export default class DataService {
             const response = await axios.get('http://localhost:9000/data/mergedData.json')
             this.rawData = response.data
             this.frameworkData = response2.data
-            console.log(this.rawData)
-            console.log(this.frameworkData)
 
             Promise.resolve(true)
         } catch (error) {

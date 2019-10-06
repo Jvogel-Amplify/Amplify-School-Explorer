@@ -80,7 +80,7 @@ export default class ChartService {
         const options = {
             title: 'Student Enrollment',
             legend: { position: 'none' },
-            hAxis: { title: 'Number of Students'},
+            hAxis: { title: 'Number of Students', minValue: 0},
             vAxis: { title: 'Grade Level'},
         }
         data.forEach((row) => {
@@ -112,9 +112,7 @@ export default class ChartService {
 
 
         frameworkScoreCodes.forEach( (frameworkScoreCode) => {
-            console.log(document.getElementById('frameworkScores'))
             const element = document.getElementById(frameworkScoreCode)
-            console.log('hello???', element)
             const data = this.dataService.getFrameworkScoresData(frameworkScoreCode)
             const gData = new google.visualization.DataTable()
             gData.addColumn('string', 'School ID')
@@ -203,7 +201,6 @@ export default class ChartService {
         }
 
         const rawData = this.dataService.getRawData()
-        console.log(rawData)
         console.log(selectedSchoolId)
         const schoolObj = rawData[selectedSchoolId]
         let value = null
