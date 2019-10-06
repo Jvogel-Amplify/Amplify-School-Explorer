@@ -383,6 +383,7 @@ export default class Map extends React.Component {
                 markerStyle['opacity'] = 1
             } else {
                 markerStyle['strokeWeight'] = 2
+                markerStyle['strokeOpacity'] = .8
                 markerStyle['strokeColor'] = 'black'
             }
 

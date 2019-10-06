@@ -39,6 +39,7 @@ export default class ChartService {
         const options = {
             title: `Higher-Need Students`,
             hAxis: {title: 'Percentage', format:'#%'},
+            colors:['#F37424','#76787B', '#4B4C4D'],
         };
 
         const chart = new google.visualization.BarChart(element);
@@ -63,6 +64,7 @@ export default class ChartService {
         const options = {
             title: `Racial Demographics`,
             hAxis: { title: 'Percentage', format:'#%'},
+            colors:['#F37424','#76787B', '#4B4C4D'],
         };
 
         const chart = new google.visualization.BarChart(element);
@@ -82,6 +84,7 @@ export default class ChartService {
             legend: { position: 'none' },
             hAxis: { title: 'Number of Students', minValue: 0},
             vAxis: { title: 'Grade Level'},
+            colors: ['#F37424'],
         }
         data.forEach((row) => {
             if(row[0] === "Total"){
@@ -258,9 +261,9 @@ export default class ChartService {
 
         data.forEach((row) => {
             if(value >= frameworkScoreKey[row[0]].startScore &&  value <= frameworkScoreKey[row[0]].endScore){
-                gData.addRow([categoryMap[row[0]], row[1], 'color: #FF8C00'])
+                gData.addRow([categoryMap[row[0]], row[1], 'color: #F37424'])
             } else {
-                gData.addRow([categoryMap[row[0]], row[1], 'color: #BFBFBF'])
+                gData.addRow([categoryMap[row[0]], row[1], 'color: #76787B'])
             }
         });
 
@@ -280,7 +283,7 @@ export default class ChartService {
         let lastRow
         data.forEach((row) => {
             if(row[0] === selectedSchoolId) {
-                lastRow = [row[1], row[2], 'point { size: 6; shape-type: circle; fill-color: #FF8C00; }']
+                lastRow = [row[1], row[2], 'point { size: 6; shape-type: circle; fill-color: #F37424; }']
             } else {
                 gData.addRow([row[1], row[2], 'point { size: 2; shape-type: circle; fill-color: #BFBFBF; opacity: 0.5; }'])
             }
