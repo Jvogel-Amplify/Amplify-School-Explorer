@@ -11,7 +11,7 @@ export const toTimestamp = (strDate) => {
 
 export const countToRGB = (count) => {
 
-    if (!count) return "rgb(169,169,169)"
+    if (!count) return "rgba(169,169,169, .4)"
 
     const minCount = 1
     const maxCount = 450
@@ -22,7 +22,7 @@ export const countToRGB = (count) => {
         percent = 99
     }
 
-    return `rgb(100%,${100-percent}%,${percent}%)`;
+    return `rgba(100%,${100-percent}%,${percent}%, .7`;
 }
 
 export const addScript = ( src ) => {

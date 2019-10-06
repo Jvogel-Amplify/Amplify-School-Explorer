@@ -73,7 +73,7 @@ export default class Map extends React.Component {
 
     
 
-    handleApiLoaded(map, maps) {
+    loadDistrictOverlay(map, maps) {
         const styleArray = [
             {
                 "elementType": "geometry",
@@ -312,6 +312,63 @@ export default class Map extends React.Component {
             strokeOpacity: .3,
             strokeColor: 'white'
         })
+
+        // Color each letter gray. Change the color when the isColorful property
+        // is set to true.
+        map.data.setStyle(function(feature) {
+            
+            // var color = 'gray';
+            // if (feature.getProperty('isColorful')) {
+            // color = feature.getProperty('color');
+            // }
+            return ({
+                fillColor: 'white',
+                fillOpacity: .1,
+                strokeWeight: 1,
+                strokeOpacity: .3,
+                strokeColor: 'white'
+            });
+        });
+        
+        // When the user clicks, set 'isColorful', changing the color of the letters.
+        map.data.addListener('click', function(event) {
+            console.log("HEY", event.feature.getProperty('school_dist'))
+            
+            // event.feature.setProperty('isColorful', true);
+        });
+        
+        // When the user hovers, tempt them to click by outlining the letters.
+        // Call revertStyle() to remove all overrides. This will use the style rules
+        // defined in the function passed to setStyle()
+        map.data.addListener('mouseover', function(event) {
+            map.data.revertStyle();
+            map.data.overrideStyle(event.feature, {fillOpacity: .3});
+        });
+        
+        map.data.addListener('mouseout', function(event) {
+            map.data.revertStyle();
+        });
+
+        // map.data.addListener('mouseover', (event) => {
+        //     map.data.setStyle({
+        //         fillColor: 'white',
+        //         fillOpacity: .7,
+        //         strokeWeight: 1,
+        //         strokeOpacity: .1,
+        //         strokeColor: 'white'
+        //     })
+        // })
+
+        // map.data.addListener('mouseout', (event) => {
+        //     map.data.setStyle({
+        //         fillColor: 'white',
+        //         fillOpacity: .1,
+        //         strokeWeight: 1,
+        //         strokeOpacity: .3,
+        //         strokeColor: 'white'
+        //     })
+        // })
+
         map.setOptions({
             styles: styleArray
         })
@@ -324,6 +381,9 @@ export default class Map extends React.Component {
 
             if (school.userCount) {
                 markerStyle['opacity'] = 1
+            } else {
+                markerStyle['strokeWeight'] = 2
+                markerStyle['strokeColor'] = 'black'
             }
 
             return (
@@ -357,7 +417,7 @@ export default class Map extends React.Component {
                     defaultZoom={11}
                     yesIWantToUseGoogleMapApiInternals
                     //styles={styleArray}
-                    onGoogleApiLoaded={({ map, maps }) => this.handleApiLoaded(map, maps)}
+                    onGoogleApiLoaded={({ map, maps }) => this.loadDistrictOverlay(map, maps)}
                 >
                     {filteredArr.map(school => {
                         return <SchoolMarkerComponent key={school.dbn} lat={school.lat} lng={school.lng} school={school} />
