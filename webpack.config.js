@@ -38,6 +38,18 @@ module.exports = {
                 }
             },
             {
+                test: /\.otf/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: 'fonts'
+                    }
+                  }
+                ]
+            },
+            {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
                   {
@@ -85,11 +97,11 @@ module.exports = {
         }),
         new CopyWebpackPlugin(
             [
-                {
-                    from: './frontend/src/fonts',
-                    to: `${DIST_DIR}/fonts`,
-                    toType: 'dir',
-                },
+                // {
+                //     from: './frontend/src/fonts',
+                //     to: `${DIST_DIR}/fonts`,
+                //     toType: 'dir',
+                // },
                 {
                     from: './frontend/src/data',
                     to: `${DIST_DIR}/data`,
