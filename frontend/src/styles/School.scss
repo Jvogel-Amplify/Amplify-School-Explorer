@@ -17,9 +17,6 @@
     }
 
     .amplify-count {
-        font-size: 30px;
-        color: #fff;
-        line-height: 100px;
         position: absolute;
         z-index: 1;
         right: 0;
@@ -29,6 +26,20 @@
         background-color: #f37424;
         border-radius: 50%;
         text-align: center;
+        color: #fff;
+
+        .count {
+            display: block;
+            font-size: 30px;
+            margin-top: 38px;
+            line-height: 23px;
+        }
+
+        span {
+            font-size: 10px;
+            display: block;
+            line-height: 18px;
+        }
     }
 
 }
