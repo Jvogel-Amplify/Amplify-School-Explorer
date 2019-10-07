@@ -5,9 +5,7 @@ export default class School extends React.Component {
     getAmplifyCount(count) {
         if (count) {
             return (
-                <div className="amplify-count">
-                    <strong>Amplify User Count:</strong> {count}
-                </div>
+                <div className="amplify-count">{count}</div>
             )
         }
     }

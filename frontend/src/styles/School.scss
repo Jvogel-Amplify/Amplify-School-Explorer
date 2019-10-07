@@ -17,15 +17,17 @@
     }
 
     .amplify-count {
-        font-size: 20px;
-        color: orangered;
+        font-size: 30px;
+        color: #fff;
+        line-height: 100px;
         position: absolute;
         z-index: 1;
         right: 0;
         top: 0;
-
-        strong {
-            font-weight: bold;
-        }
+        width: 100px;
+        height: 100px;
+        background-color: #f37424;
+        border-radius: 50%;
+        text-align: center;
     }
 }
