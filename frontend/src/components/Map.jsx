@@ -55,7 +55,21 @@ export default class Map extends React.Component {
 
     filterMap(key) {
         const allowed = this.state.allowed
-        allowed.push(key)
+        const index = allowed.indexOf(key)
+
+        if (index > -1) {
+            allowed.splice(index, 1)
+        } else {
+            allowed.push(key)
+        }
+
+        if (allowed.length === 0) {
+            this.setState({
+                filtered: this.props.schools
+            })
+
+            return
+        }
 
         this.setState({
             allowed
@@ -81,7 +95,7 @@ export default class Map extends React.Component {
         infowindow.setPosition(event.latLng)
         infowindow.open(map);
     }
-    
+
 
     loadDistrictOverlay(map, maps) {
         const styleArray = [
@@ -323,10 +337,10 @@ export default class Map extends React.Component {
             }
         ]
         map.data.loadGeoJson('http://localhost:9000/data/school-districts.geojson')
-        
-        
+
+
         map.data.setStyle(function(feature) {
-            
+
             // var color = 'gray';
             // if (feature.getProperty('isColorful')) {
             // color = feature.getProperty('color');
@@ -343,7 +357,7 @@ export default class Map extends React.Component {
         const infowindow = new google.maps.InfoWindow({});
 
         map.data.addListener('click', this.displayDistrictInfoWindow.bind(this, map, infowindow));
-        
+
         // When the user hovers, tempt them to click by outlining the letters.
         // Call revertStyle() to remove all overrides. This will use the style rules
         // defined in the function passed to setStyle()
@@ -351,7 +365,7 @@ export default class Map extends React.Component {
             map.data.revertStyle();
             map.data.overrideStyle(event.feature, {fillOpacity: .5});
         });
-        
+
         map.data.addListener('mouseout', function(event) {
             map.data.revertStyle();
         });
