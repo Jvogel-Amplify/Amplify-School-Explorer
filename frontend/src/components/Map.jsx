@@ -336,7 +336,7 @@ export default class Map extends React.Component {
                 ]
             }
         ]
-        map.data.loadGeoJson('../data/school-districts.geojson')
+        map.data.loadGeoJson('./data/school-districts.geojson')
 
 
         map.data.setStyle(function(feature) {
