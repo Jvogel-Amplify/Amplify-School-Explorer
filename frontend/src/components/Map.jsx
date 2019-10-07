@@ -41,7 +41,8 @@ export default class Map extends React.Component {
         this.displayDistrictInfoWindow = this.displayDistrictInfoWindow.bind(this)
     }
 
-    openModal(id) {
+    openModal(id, event) {
+        event.stopPropagation()
         this.setState({
             modalIsOpen: true,
             selectedSchool: id
@@ -89,7 +90,7 @@ export default class Map extends React.Component {
     displayDistrictInfoWindow(map, infowindow, event) {
         const district = event.feature.getProperty('school_dist')
         const districtData = this.props.dataService.getDistrictData(district)
-        const html = `<div>District: ${district}</br>Amplify Users: ${ districtData.userCount || 0}</br>Number of schools: ${ districtData.schoolCount || 0}</div>`
+        const html = `<div>District: ${district}</br>Amplify Users in District: ${ districtData.userCount || 0}</br>Number of schools: ${ districtData.schoolCount || 0}</div>`
         infowindow.setContent(html);
         infowindow.setPosition(event.latLng)
         infowindow.open(map);
@@ -376,17 +377,26 @@ export default class Map extends React.Component {
 
     render() {
         const SchoolMarkerComponent = ({ key, school }) => {
-            const markerColor = lib.countToRGB(school.userCount)
-            const markerStyle = { backgroundColor: markerColor, borderColor: markerColor, strokeWeight: 1 }
+            const markerColor = '#8F2261' //lib.colorLuminance(school.userCount)
+            const markerOpacity = lib.opacityPercent(school.userCount)
+            //const markerColor = lib.countToRGB(school.userCount)
+            const markerStyle = { backgroundColor: markerColor, borderColor: markerColor, strokeWeight: .5 }
 
-            if (school.userCount) {
-                markerStyle['opacity'] = 1
+            if (!school.userCount || school.userCount === 0) {
+                markerStyle['opacity'] = .2
+                markerStyle['borderColor'] = 'black'
+                markerStyle['borderOpacity'] = .2
+                markerStyle['borderSize'] = .5
+
+                //markerStyle['fillOpacity'] = .4
+                markerStyle['backgroundColor'] = 'white'
             } else {
-                markerStyle['opacity'] = .3
+                markerStyle['opacity'] = markerOpacity
                 markerStyle['borderColor'] = 'black'
 
-                markerStyle['fillOpacity'] = .4
-                markerStyle['backgroundColor'] = 'white'
+                // if(school.userCount < 20) {
+                //     markerStyle['opacity'] = .5
+                // }
             }
 
             return (

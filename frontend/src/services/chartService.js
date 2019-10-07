@@ -39,7 +39,7 @@ export default class ChartService {
         const options = {
             title: `Higher-Need Students`,
             hAxis: {title: 'Percentage', format:'#%'},
-            colors:['#F37424','#76787B', '#4B4C4D'],
+            colors:['#8F2261','#76787B', '#4B4C4D'],
         };
 
         const chart = new google.visualization.BarChart(element);
@@ -64,7 +64,7 @@ export default class ChartService {
         const options = {
             title: `Racial Demographics`,
             hAxis: { title: 'Percentage', format:'#%'},
-            colors:['#F37424','#76787B', '#4B4C4D'],
+            colors:['#8F2261','#76787B', '#4B4C4D'],
         };
 
         const chart = new google.visualization.BarChart(element);
@@ -84,7 +84,7 @@ export default class ChartService {
             legend: { position: 'none' },
             hAxis: { title: 'Number of Students', minValue: 0},
             vAxis: { title: 'Grade Level'},
-            colors: ['#F37424'],
+            colors: ['#8F2261'],
         }
         data.forEach((row) => {
             if(row[0] === "Total"){
@@ -98,50 +98,50 @@ export default class ChartService {
         chart.draw(gData, options)
     }
 
-    drawAllFrameworkScores(elementWrapperId, selectedSchoolId) {
-        const elementWrapper = document.getElementById(elementWrapperId)
+    // drawAllFrameworkScores(elementWrapperId, selectedSchoolId) {
+    //     const elementWrapper = document.getElementById(elementWrapperId)
 
-        const frameworkScoreCodes = ["CT"]
+    //     const frameworkScoreCodes = ["CT"]
 
-        const frameworkScoreCodeMap = {
-            "CT": "Collaborative Teachers",
-            "ES": "Effective School Leadership",
-            "RI": "Rigorous Instruction",
-            "SE": "Supportive Environment",
-            "SF": "Strong Family-Community Ties",
-            "TR": "Trust",
-            "SA": "Student Achievement",
-        }
+    //     const frameworkScoreCodeMap = {
+    //         "CT": "Collaborative Teachers",
+    //         "ES": "Effective School Leadership",
+    //         "RI": "Rigorous Instruction",
+    //         "SE": "Supportive Environment",
+    //         "SF": "Strong Family-Community Ties",
+    //         "TR": "Trust",
+    //         "SA": "Student Achievement",
+    //     }
 
 
-        frameworkScoreCodes.forEach( (frameworkScoreCode) => {
-            const element = document.getElementById(frameworkScoreCode)
-            const data = this.dataService.getFrameworkScoresData(frameworkScoreCode)
-            const gData = new google.visualization.DataTable()
-            gData.addColumn('string', 'School ID')
-            gData.addColumn('number', 'Framework Score') 
-            // gData.addColumn({type: 'string', role: 'annotation'});
-            //gData.addColumn({'type': 'string', 'role': 'style'})
+    //     frameworkScoreCodes.forEach( (frameworkScoreCode) => {
+    //         const element = document.getElementById(frameworkScoreCode)
+    //         const data = this.dataService.getFrameworkScoresData(frameworkScoreCode)
+    //         const gData = new google.visualization.DataTable()
+    //         gData.addColumn('string', 'School ID')
+    //         gData.addColumn('number', 'Framework Score') 
+    //         // gData.addColumn({type: 'string', role: 'annotation'});
+    //         //gData.addColumn({'type': 'string', 'role': 'style'})
 
-            const options = {
-                title: `${frameworkScoreCodeMap[frameworkScoreCode]} Score Distribution`,
-                legend: { position: 'none' },
-                // annotations: {
-                //     style: 'line'
-                // }
-            }
-            data.forEach((row) => {
-                if(row[0] === selectedSchoolId){
-                    gData.addRow([row[0], row[1]])
-                } else {
-                    gData.addRow([row[0], row[1]])
-                }
-            });
+    //         const options = {
+    //             title: `${frameworkScoreCodeMap[frameworkScoreCode]} Score Distribution`,
+    //             legend: { position: 'none' },
+    //             // annotations: {
+    //             //     style: 'line'
+    //             // }
+    //         }
+    //         data.forEach((row) => {
+    //             if(row[0] === selectedSchoolId){
+    //                 gData.addRow([row[0], row[1]])
+    //             } else {
+    //                 gData.addRow([row[0], row[1]])
+    //             }
+    //         });
 
-            const chart = new google.visualization.Histogram(element);
-            chart.draw(gData, options)
-        } )
-    }
+    //         const chart = new google.visualization.Histogram(element);
+    //         chart.draw(gData, options)
+    //     } )
+    // }
 
     // drawFrameworkScore(scoreCode, selectedSchoolId) {
     //     const frameworkScoreCodeMap = {
@@ -204,7 +204,6 @@ export default class ChartService {
         }
 
         const rawData = this.dataService.getRawData()
-        console.log(selectedSchoolId)
         const schoolObj = rawData[selectedSchoolId]
         let value = null
         if(schoolObj.frameworkScores){
@@ -220,12 +219,13 @@ export default class ChartService {
 
         const options = {
             legend: { position: 'none' },
-            // yAxis: {
-            //     maxValue: 175
-            // }
+            hAxis: {
+                title: 'Number of schools in the city'
+            },
             // annotations: {
             //     style: 'line'
             // }
+            isStacked: true
         }
 
         if (scoreCode === 'SA'){
@@ -261,7 +261,7 @@ export default class ChartService {
 
         data.forEach((row) => {
             if(value >= frameworkScoreKey[row[0]].startScore &&  value <= frameworkScoreKey[row[0]].endScore){
-                gData.addRow([categoryMap[row[0]], row[1], 'color: #F37424'])
+                gData.addRow([categoryMap[row[0]], row[1], 'color: #8F2261'])
             } else {
                 gData.addRow([categoryMap[row[0]], row[1], 'color: #76787B'])
             }
@@ -283,7 +283,7 @@ export default class ChartService {
         let lastRow
         data.forEach((row) => {
             if(row[0] === selectedSchoolId) {
-                lastRow = [row[1], row[2], 'point { size: 6; shape-type: circle; fill-color: #F37424; }']
+                lastRow = [row[1], row[2], 'point { size: 6; shape-type: circle; fill-color: #8F2261; }']
             } else {
                 gData.addRow([row[1], row[2], 'point { size: 2; shape-type: circle; fill-color: #BFBFBF; opacity: 0.5; }'])
             }
