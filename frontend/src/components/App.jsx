@@ -9,7 +9,7 @@ export default class App extends React.Component {
 
         return (
             <div id="app">
-                <Map schools={schools} chartService={this.props.chartService}/>
+                <Map schools={schools} dataService={this.props.dataService} chartService={this.props.chartService}/>
             </div>
         )
     }

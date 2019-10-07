@@ -38,6 +38,7 @@ export default class Map extends React.Component {
 
         this.openModal = this.openModal.bind(this)
         this.closeModal = this.closeModal.bind(this)
+        this.displayDistrictInfoWindow = this.displayDistrictInfoWindow.bind(this)
     }
 
     openModal(id) {
@@ -71,6 +72,14 @@ export default class Map extends React.Component {
         })
     }
 
+    displayDistrictInfoWindow(map, infowindow, event) {
+        const district = event.feature.getProperty('school_dist')
+        const districtData = this.props.dataService.getDistrictData(district)
+        const html = `<div>District: ${district}</br>Amplify Users: ${ districtData.userCount || 0}</br>Number of schools: ${ districtData.schoolCount || 0}</div>`
+        infowindow.setContent(html);
+        infowindow.setPosition(event.latLng)
+        infowindow.open(map);
+    }
     
 
     loadDistrictOverlay(map, maps) {
@@ -313,16 +322,8 @@ export default class Map extends React.Component {
             }
         ]
         map.data.loadGeoJson('http://localhost:9000/data/school-districts.geojson')
-        // map.data.setStyle({
-        //     fillColor: '#4B4C4D',
-        //     fillOpacity: .3,
-        //     strokeWeight: 2,
-        //     strokeOpacity: 1,
-        //     strokeColor: '#4B4C4D'
-        // })
-
-        // Color each letter gray. Change the color when the isColorful property
-        // is set to true.
+        
+        
         map.data.setStyle(function(feature) {
             
             // var color = 'gray';
@@ -337,13 +338,10 @@ export default class Map extends React.Component {
                 strokeColor: '#4B4C4D'
             });
         });
-        
-        // When the user clicks, set 'isColorful', changing the color of the letters.
-        map.data.addListener('click', function(event) {
-            console.log("HEY", event.feature.getProperty('school_dist'))
-            
-            // event.feature.setProperty('isColorful', true);
-        });
+
+        const infowindow = new google.maps.InfoWindow({});
+
+        map.data.addListener('click', this.displayDistrictInfoWindow.bind(this, map, infowindow));
         
         // When the user hovers, tempt them to click by outlining the letters.
         // Call revertStyle() to remove all overrides. This will use the style rules
@@ -356,26 +354,6 @@ export default class Map extends React.Component {
         map.data.addListener('mouseout', function(event) {
             map.data.revertStyle();
         });
-
-        // map.data.addListener('mouseover', (event) => {
-        //     map.data.setStyle({
-        //         fillColor: 'white',
-        //         fillOpacity: .7,
-        //         strokeWeight: 1,
-        //         strokeOpacity: .1,
-        //         strokeColor: 'white'
-        //     })
-        // })
-
-        // map.data.addListener('mouseout', (event) => {
-        //     map.data.setStyle({
-        //         fillColor: 'white',
-        //         fillOpacity: .1,
-        //         strokeWeight: 1,
-        //         strokeOpacity: .3,
-        //         strokeColor: 'white'
-        //     })
-        // })
 
         map.setOptions({
             styles: styleArray

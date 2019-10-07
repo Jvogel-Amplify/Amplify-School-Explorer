@@ -50,6 +50,8 @@ export const mergeData = async () => {
         fs.writeFileSync(path.join(__dirname, '../data/mergedData.json'), JSON.stringify(rawData))
         const transformedFrameworkData = transformFrameworkScoresData(rawData)
         fs.writeFileSync(path.join(__dirname, '../data/frameworkData.json'), JSON.stringify(transformedFrameworkData))
+        const districtData = transformDistrictData(rawData)
+        fs.writeFileSync(path.join(__dirname, '../data/district.json'), JSON.stringify(districtData))
 
         console.log('done!')
         Promise.resolve(true)
@@ -57,6 +59,158 @@ export const mergeData = async () => {
         console.error(error)
         Promise.reject(error)
     }
+}
+
+const transformDistrictData = (rawData) => {
+    const results = {
+        1: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        2: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        3: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        4: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        5: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        6: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        7: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        8: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        9: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        10: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        11: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        12: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        13: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        14: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        15: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        16: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        17: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        18: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        19: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        20: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        21: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        22: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        23: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        24: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        25: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        26: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        27: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        28: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        29: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        30: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        31: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        32: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        75: {
+            userCount: 0,
+            schoolCount: 0,
+        },
+        84: {
+            userCount: 0,
+            schoolCount: 0,
+        }
+    }
+
+    Object.keys(rawData).forEach(schoolId => {
+        const district = parseInt(schoolId.slice(0, 2))
+        const userCount = rawData[schoolId].userCount
+        if(userCount) {
+            results[district].userCount += parseInt(userCount)
+        }
+        results[district].schoolCount += 1
+
+    })
+    return results
 }
 
 /**

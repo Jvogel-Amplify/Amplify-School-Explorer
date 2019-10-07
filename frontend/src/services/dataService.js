@@ -6,15 +6,18 @@ export default class DataService {
     constructor() {
       this.rawData = {}
       this.frameworkData = {}
+      this.districtData = {}
       this.headersMap = null
     }
 
     async fetchData() {
         try {
-            const response2 = await axios.get('http://localhost:9000/data/frameworkData.json')
             const response = await axios.get('http://localhost:9000/data/mergedData.json')
+            const response2 = await axios.get('http://localhost:9000/data/frameworkData.json')
+            const response3 = await axios.get('http://localhost:9000/data/district.json')
             this.rawData = response.data
             this.frameworkData = response2.data
+            this.districtData = response3.data
 
             Promise.resolve(true)
         } catch (error) {
@@ -110,5 +113,9 @@ export default class DataService {
         } else {
             throw new Error('Must fetch data first')
         }
+    }
+
+    getDistrictData(district){
+        return this.districtData[district]
     }
 }
