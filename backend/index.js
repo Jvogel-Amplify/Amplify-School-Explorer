@@ -16,11 +16,11 @@ app.get('/merge-data', mergeDataController)
 
  // serve static data files
 
-app.use('/data',
-    express.static(
-        path.join(__dirname, '/data'),
-    ),
-)
+// app.use('/data',
+//     express.static(
+//         path.join(__dirname, '/data'),
+//     ),
+// )
 
 // serve frontend
 app.use('/',

@@ -1,5 +1,9 @@
 import axios from 'axios'
 import { toCamelCase } from 'lib'
+import schoolData from '../data/mergedData.json'
+import frameworkData from '../data/frameworkData.json'
+import districtData from '../data/district.json'
+
 
 export default class DataService {
 
@@ -12,12 +16,12 @@ export default class DataService {
 
     async fetchData() {
         try {
-            const response = await axios.get('http://localhost:9000/data/mergedData.json')
-            const response2 = await axios.get('http://localhost:9000/data/frameworkData.json')
-            const response3 = await axios.get('http://localhost:9000/data/district.json')
-            this.rawData = response.data
-            this.frameworkData = response2.data
-            this.districtData = response3.data
+            //const response = await axios.get('http://localhost:9000/data/mergedData.json')
+            //const response2 = await axios.get('http://localhost:9000/data/frameworkData.json')
+            //const response3 = await axios.get('http://localhost:9000/data/district.json')
+            this.rawData = schoolData //response.data
+            this.frameworkData = frameworkData //response2.data
+            this.districtData = districtData //response3.data
 
             Promise.resolve(true)
         } catch (error) {
