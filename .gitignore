@@ -5,3 +5,4 @@ frontend/dist
 backend/data/*
 !backend/data/school-locations-17-18.json
 !backend/data/amplify-school-user-count.json
+!backend/data/school-districts.geojson
