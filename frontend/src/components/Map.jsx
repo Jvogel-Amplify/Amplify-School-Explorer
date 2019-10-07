@@ -79,7 +79,7 @@ export default class Map extends React.Component {
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#212121"
+                  "color": "#f5f5f5"
                     }
                 ]
             },
@@ -95,7 +95,7 @@ export default class Map extends React.Component {
                 "elementType": "labels.text.fill",
                 "stylers": [
                     {
-                        "color": "#757575"
+                  "color": "#616161"
                     }
                 ]
             },
@@ -103,43 +103,34 @@ export default class Map extends React.Component {
                 "elementType": "labels.text.stroke",
                 "stylers": [
                     {
-                        "color": "#212121"
+                  "color": "#f5f5f5"
                     }
                 ]
             },
             {
-                "featureType": "administrative",
-                "elementType": "geometry",
+              "featureType": "administrative.land_parcel",
+              "elementType": "labels",
                 "stylers": [
                     {
-                        "color": "#757575"
+                  "visibility": "off"
                     }
                 ]
             },
             {
-                "featureType": "administrative.country",
+              "featureType": "administrative.land_parcel",
                 "elementType": "labels.text.fill",
                 "stylers": [
                     {
-                        "color": "#9e9e9e"
+                  "color": "#bdbdbd"
                     }
                 ]
             },
             {
-                "featureType": "administrative.land_parcel",
-                "elementType": "labels",
+              "featureType": "poi",
+              "elementType": "geometry",
                 "stylers": [
                     {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative.locality",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "color": "#bdbdbd"
+                  "color": "#eeeeee"
                     }
                 ]
             },
@@ -174,7 +165,7 @@ export default class Map extends React.Component {
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#181818"
+                  "color": "#e5e5e5"
                     }
                 ]
             },
@@ -183,31 +174,31 @@ export default class Map extends React.Component {
                 "elementType": "labels.text.fill",
                 "stylers": [
                     {
-                        "color": "#616161"
+                  "color": "#9e9e9e"
                     }
                 ]
             },
             {
-                "featureType": "poi.park",
-                "elementType": "labels.text.stroke",
+              "featureType": "road",
+              "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#1b1b1b"
+                  "color": "#ffffff"
                     }
                 ]
             },
             {
                 "featureType": "road",
-                "elementType": "geometry.fill",
+              "elementType": "labels.icon",
                 "stylers": [
                     {
-                        "color": "#2c2c2c"
+                  "visibility": "off"
                     }
                 ]
             },
             {
-                "featureType": "road",
-                "elementType": "labels.icon",
+              "featureType": "road.arterial",
+              "elementType": "labels",
                 "stylers": [
                     {
                         "visibility": "off"
@@ -215,38 +206,46 @@ export default class Map extends React.Component {
                 ]
             },
             {
-                "featureType": "road",
+              "featureType": "road.arterial",
                 "elementType": "labels.text.fill",
                 "stylers": [
                     {
-                        "color": "#8a8a8a"
+                  "color": "#757575"
                     }
                 ]
             },
             {
-                "featureType": "road.arterial",
+              "featureType": "road.highway",
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#373737"
+                  "color": "#dadada"
+                }
+              ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "labels",
+              "stylers": [
+                {
+                  "visibility": "off"
                     }
                 ]
             },
             {
                 "featureType": "road.highway",
-                "elementType": "geometry",
+              "elementType": "labels.text.fill",
                 "stylers": [
                     {
-                        "color": "#3c3c3c"
+                  "color": "#616161"
                     }
                 ]
             },
             {
-                "featureType": "road.highway.controlled_access",
-                "elementType": "geometry",
+              "featureType": "road.local",
                 "stylers": [
                     {
-                        "color": "#4e4e4e"
+                  "visibility": "off"
                     }
                 ]
             },
@@ -264,7 +263,7 @@ export default class Map extends React.Component {
                 "elementType": "labels.text.fill",
                 "stylers": [
                     {
-                        "color": "#616161"
+                  "color": "#9e9e9e"
                     }
                 ]
             },
@@ -277,20 +276,29 @@ export default class Map extends React.Component {
                 ]
             },
             {
-                "featureType": "transit",
-                "elementType": "labels.text.fill",
+              "featureType": "transit.line",
+              "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#757575"
+                  "color": "#e5e5e5"
                     }
                 ]
+            },
+            {
+              "featureType": "transit.station",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "color": "#eeeeee"
+                }
+              ]
             },
             {
                 "featureType": "water",
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#000000"
+                  "color": "#c9c9c9"
                     }
                 ]
             },
@@ -299,19 +307,19 @@ export default class Map extends React.Component {
                 "elementType": "labels.text.fill",
                 "stylers": [
                     {
-                        "color": "#3d3d3d"
+                  "color": "#9e9e9e"
                     }
                 ]
             }
         ]
         map.data.loadGeoJson('http://localhost:9000/data/school-districts.geojson')
-        map.data.setStyle({
-            fillColor: 'white',
-            fillOpacity: .1,
-            strokeWeight: 1,
-            strokeOpacity: .3,
-            strokeColor: 'white'
-        })
+        // map.data.setStyle({
+        //     fillColor: '#4B4C4D',
+        //     fillOpacity: .3,
+        //     strokeWeight: 2,
+        //     strokeOpacity: 1,
+        //     strokeColor: '#4B4C4D'
+        // })
 
         // Color each letter gray. Change the color when the isColorful property
         // is set to true.
@@ -322,11 +330,11 @@ export default class Map extends React.Component {
             // color = feature.getProperty('color');
             // }
             return ({
-                fillColor: 'white',
+                fillColor: '#4B4C4D',
                 fillOpacity: .1,
                 strokeWeight: 1,
-                strokeOpacity: .3,
-                strokeColor: 'white'
+                strokeOpacity: 8,
+                strokeColor: '#4B4C4D'
             });
         });
         
@@ -342,7 +350,7 @@ export default class Map extends React.Component {
         // defined in the function passed to setStyle()
         map.data.addListener('mouseover', function(event) {
             map.data.revertStyle();
-            map.data.overrideStyle(event.feature, {fillOpacity: .3});
+            map.data.overrideStyle(event.feature, {fillOpacity: .5});
         });
         
         map.data.addListener('mouseout', function(event) {
@@ -382,9 +390,11 @@ export default class Map extends React.Component {
             if (school.userCount) {
                 markerStyle['opacity'] = 1
             } else {
-                markerStyle['strokeWeight'] = 2
-                markerStyle['strokeOpacity'] = .8
-                markerStyle['strokeColor'] = 'black'
+                markerStyle['opacity'] = .3
+                markerStyle['borderColor'] = 'black'
+
+                markerStyle['fillOpacity'] = .4
+                markerStyle['backgroundColor'] = 'white'
             }
 
             return (
