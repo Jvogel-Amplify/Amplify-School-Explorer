@@ -40,11 +40,13 @@ export const mergeData = async () => {
             }
         })
 
-        const amplifyUserCount = JSON.parse(fs.readFileSync(path.join(__dirname, `../data/amplify-school-user-count.json`)))
+        const amplifyUserCountRaw = JSON.parse(fs.readFileSync(path.join(__dirname, `../data/amplify-users-raw.json`)))
+
+        const amplifyUserCount = transformAmplifyUserCount(amplifyUserCountRaw)//JSON.parse(fs.readFileSync(path.join(__dirname, `../data/amplify-school-user-count.json`)))
         amplifyUserCount.forEach(schoolObj => {
             const schoolId = schoolObj.id
             if(rawData[schoolId]) {
-                rawData[schoolId].userCount = schoolObj.count_user
+                rawData[schoolId].userCount = schoolObj.userCount
             }
         })
         fs.writeFileSync(path.join(__dirname, '../data/mergedData.json'), JSON.stringify(rawData))
@@ -59,6 +61,23 @@ export const mergeData = async () => {
         console.error(error)
         Promise.reject(error)
     }
+}
+
+const transformAmplifyUserCount = (rawData) => {
+    const results = []
+    rawData.forEach(dataPoint => {
+        const schoolNameAndId = dataPoint["dim_user_enrollment.org_school_name"]
+        if(schoolNameAndId){
+            const parts = schoolNameAndId.split(' - ')
+            const id = parts[0]
+            const name = parts.slice(1, parts.length).join(' - ')
+            const userCount = parseInt(dataPoint["fact_curriculum_event.count_user"]) || null
+            results.push({
+                id, name, userCount
+            })
+        }
+    })
+    return results
 }
 
 const transformDistrictData = (rawData) => {
