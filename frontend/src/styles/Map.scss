@@ -1,5 +1,22 @@
 $transitionSpeed: 100ms ease-in-out;
 
+#title {
+    color: #F37424;
+    color: #F37424;
+    top: 32px;
+    left: 110px;
+    font-size: 41px;
+    z-index: 1;
+    font-weight: bold;
+    position: absolute;
+}
+
+.ReactModalPortal{
+    div:first-child {
+        z-index: 2;
+    }
+}
+
 .school-marker {
     position: absolute;
     top:50%;
@@ -28,6 +45,7 @@ $transitionSpeed: 100ms ease-in-out;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 
 .modal-header {
