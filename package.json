@@ -22,7 +22,8 @@
     "react-burger-menu": "^2.6.11",
     "react-dom": "^16.10.1",
     "react-modal": "^3.10.1",
-    "react-tabs": "^3.0.0"
+    "react-tabs": "^3.0.0",
+    "react-tooltip": "^3.11.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",

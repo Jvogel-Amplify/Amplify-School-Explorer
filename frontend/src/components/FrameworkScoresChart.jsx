@@ -25,6 +25,8 @@ export default class FrameworkScoresChart extends React.Component {
     render() {
         return (
             <div id='frameworkScores' className="row">
+                <p class='framework-title'>The Framework for Great Schools <a href="https://www.schools.nyc.gov/about-us/vision-and-mission/framework-for-great-schools" target="_blank">?</a></p>
+                <p class="framework-desc">The Framework for Great Schools is the primary way the Department of Education partners schools. At the center of the Framework is student achievement. Surrounding that core are three elements of student support: instructional guidance, teacher empowerment, and student-centered learning. Beyond the classroom, we need effective school leadership and strong parent-community collaboration. The element that ties all of these supports together is trust. Building trust across the system and within a school—between administrators, educators, students, and families—is the foundation of the Framework for Great Schools.</p>
                 <Tabs>
                     <TabList>
                         <Tab>{frameworkScoreCodeMap["CT"]}</Tab>
