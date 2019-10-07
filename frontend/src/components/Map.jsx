@@ -421,6 +421,7 @@ export default class Map extends React.Component {
             // Important! Always set the container height explicitly
             <div style={{ height: '100vh', width: '100%' }}>
                 <Filters schools={schoolsArr} filterMap={this.filterMap.bind(this)} />
+                <div id='title'>Amplify School Explorer</div>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyCOfFzd3eXuf_2TaTiW_yM5AiVZMUWTYNQ' }}
                     defaultCenter={{
