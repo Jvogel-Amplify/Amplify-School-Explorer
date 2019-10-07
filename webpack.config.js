@@ -86,11 +86,17 @@ module.exports = {
         new CopyWebpackPlugin(
             [
                 {
-                    from: './frontend/src/assets',
-                    to: `${DIST_DIR}`,
+                    from: './frontend/src/fonts',
+                    to: `${DIST_DIR}/fonts`,
+                    toType: 'dir',
+                },
+                {
+                    from: './frontend/src/data',
+                    to: `${DIST_DIR}/data`,
                     toType: 'dir',
                 },
             ],
         ),
+        
     ],
 };
