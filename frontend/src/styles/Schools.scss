@@ -11,5 +11,10 @@ ul {
         &:hover {
             background-color: #efefef
         }
+
+        &.active {
+            background-color: #ccc;
+            color: #fff;
+        }
     }
 }
